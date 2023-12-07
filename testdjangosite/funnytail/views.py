@@ -1,13 +1,32 @@
 from django.http import HttpResponse, HttpResponseNotFound
 from django.shortcuts import render, redirect
 
+menu = [{'title': 'О сайте', 'url_name': 'about'},
+        {'title': 'Добавить статью', 'url_name': 'add_page'},
+        {'title': 'Обратная связь', 'url_name': 'contact'},
+        {'title': 'Войти', 'url_name': 'login'}]
+
 
 def index(request):
-    return render(request, 'funnytail/index.html')
+    data = {'title': 'Главная страница', 'menu': menu}
+    return render(request, 'funnytail/index.html', context=data)
+
+
+def addpage(request):
+    return HttpResponse("<h1>Добавление статьи</h1>")
+
+
+def contact(request):
+    return HttpResponse("<h1>Обратная связь</h1>")
+
+
+def login(request):
+    return HttpResponse("<h1>Авторизация</h1>")
 
 
 def about(request):
-    return render(request, 'funnytail/about.html')
+    data = {'title': 'О сайте'}
+    return render(request, 'funnytail/about.html', context=data)
 
 
 def categories(request, category_id):
@@ -17,4 +36,5 @@ def categories(request, category_id):
 
 
 def page_not_found(request, exception):
-    return render(request, 'funnytail/error404.html')
+    data = {'title': 'Ошибка 404, страница не найдена', 'body': 'Страница не найдена'}
+    return render(request, 'funnytail/error404.html', context=data)
