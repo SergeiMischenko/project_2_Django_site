@@ -25,7 +25,7 @@ def login(request):
 
 
 def about(request):
-    data = {'title': 'О сайте'}
+    data = {'title': 'О сайте', 'menu': menu}
     return render(request, 'funnytail/about.html', context=data)
 
 
