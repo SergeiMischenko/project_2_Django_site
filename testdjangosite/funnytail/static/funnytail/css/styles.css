@@ -1,5 +1,6 @@
 html, body {
-    font-family: 'Arial';
+    font-family: 'Arial', sans-serif;
+    background-color: #eee;
     margin: 0;
     padding: 0;
     height: 100%;
@@ -7,499 +8,195 @@ html, body {
     color: #444;
 }
 
-a {
-    color: #0059b2;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #CC0000;
-    text-decoration: underline;
-}
-
-img {
-    max-width: 600px;
-    height: auto;
-}
-
-img.img-article-left {
-    max-width: 300px;
-    height: auto;
-    float: left;
-    padding: 0 10px 10px 0;
-}
-
-img.img-article-left.thumb {
-    max-width: 150px;
-    height: auto;
-}
-
-p.link-read-post {
-    text-align: right;
-}
-
-p.link-read-post a {
-    padding: 10px;
-    min-width: 100px;
-    background: #333671;
-    color: #fff;
-    text-decoration: none;
-}
-
-div.article-panel {
-    background: #eee;
-    padding: 5px 10px 5px 10px;
-    box-sizing: border-box;
-    overflow: hidden;
-    color: #555;
-}
-
-div.article-panel p.first {
-    margin: 0;
-    float: left;
-}
-
-div.article-panel p.last {
-    margin: 0;
-    float: right;
-}
-
-ul.list-articles {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-ul.list-articles li {
-    border-bottom: 1px solid #ccc;
-}
-
-.table-page {
-    width: 100%;
-    height: 100%;
-    vertical-align: top;
-}
-
-.table-page tr {
-    height: 100%;
-}
-
-.clear {
-    clear: both;
-}
-
+/* Общий стиль для шапки */
 .header {
-    background: #fbc98e;
-    height: 85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    background-color: #333; /* Цвет фона шапки */
+    color: #fff; /* Цвет текста */
 }
 
-.logo {
-    background: url('../images/logo.png') no-repeat 10px 5px;
-    width: 90px;
-    height: 120px;
+/* Стиль для логотипа */
+.logo a {
+    display: block;
+    width: 70px; /* Задайте необходимую ширину логотипа */
+    height: 70px; /* Задайте необходимую высоту логотипа */
+    background: url('../images/logo.png') no-repeat center center;
+    background-size: cover;
 }
 
-ul.main_menu {
+/* Стиль для основного меню */
+.main_menu {
     list-style: none;
+    display: flex;
     margin: 0;
     padding: 0;
-    height: 85px;
-    color: #fdc073;
-    font-size: 20px;
-    overflow: hidden;
 }
 
-ul.main_menu li {
-    float: left;
-    margin: 30px 30px 0 60px;
+.main_menu li {
+    margin-right: 30px; /* Расстояние между пунктами меню */
+
 }
 
-ul.main_menu li.logo {
-    margin: 0;
-}
-
-ul.main_menu li.last {
-    float: right;
-}
-
-ul.main_menu li a {
-    color: #3b301e;
+.main_menu a {
     text-decoration: none;
-}
-
-ul.main_menu li a:hover {
-    color: #9d7d52;
-}
-
-.panelitems {
-    text-align: center;
-}
-
-ul.langitem {
-    list-style: none;
-    display: inline-block;
-    margin: 30px;
-    padding: 0;
-    max-width: 300px
-}
-
-ul.langitem li {
-    margin: 10px 0 0 0;
-    width: 100%;
-}
-
-ul.langitem li.image {
-    margin: 0;
-    text-align: center;
-    width: 100%;
-    height: 250px;
-    overflow: hidden;
-}
-
-ul.langitem li.descr {
-    color: #777;
-    height: 170px;
-    overflow: hidden;
-}
-
-ul.langitem li a {
-    color: #fdc073;
-    text-decoration: none;
-    font-size: 20px;
-}
-
-ul.langitem li a:hover {
-    color: #FDA83D;
-}
-
-div.button {
-    background: #3F4137;
-    max-width: 200px;
-    margin: 0 auto;
-    padding: 5px 20px 5px 20px;
-    border-radius: 10px;
-    font-size: 20px;
-}
-
-.table-content {
-    width: 100%;
-    min-height: 100%;
-    height: 100%;
-}
-
-.left-chapters {
-    margin: 0;
-    background: #eee;
-    border-right: 1px solid #ccc;
-}
-
-.left-chapters ul {
-    width: 230px;
-    margin: 0;
-    padding: 20px 10px 10px 20px;
-    list-style: none;
-    font-size: 20px;
-}
-
-.left-chapters ul li {
-    margin: 30px 0 0 0;
-    color: #999;
-}
-
-.left-chapters ul li.selected {
-    color: #0059b2;
-}
-
-.left-chapters ul li a {
-    color: #444;
-    text-decoration: none;
-}
-
-.left-chapters ul li a:hover {
-    color: #CC0000;
-}
-
-.left-chapters ul li.share {
-    margin: 60px 0 0 0;
-}
-
-.left-chapters ul li.share p {
-    margin: 30px 0 30px 0;
-}
-
-.left-chapters ul li.share a {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    margin: 0 20px 0 0;
-}
-
-ul.tags-list {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-ul.tags-list li {
-    margin: 0;
-    padding: 0 0 10px;
-    display: inline-block;
-}
-
-ul.tags-list li a {
+    color: #ffffffe4; /* Цвет текста пунктов меню */
+    font-weight: bold;
+    font-size: 18px; /* Размер шрифта пунктов меню */
     padding: 5px;
-    font-size: 16px;
-    border: 1px solid #aaa;
+    border-radius: 10px;
+    transition: background-color 0.6s ease;
+
 }
 
+.main_menu a:hover {
+    background-color: #555;
+}
+
+.main_menu li.last {
+    margin-right: 0; /* Убираем правый отступ у последнего пункта меню */
+}
+
+/* Стиль для основного контента */
+.main_content {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh; /* Минимальная высота основного контейнера равная 100% высоты видимой области браузера */
+}
+
+/* Стиль для боковой панели */
+.left-chapters {
+    width: 280px; /* Задайте необходимую ширину боковой панели */
+    background-color: #555; /* Цвет фона боковой панели */
+    padding: 5px;
+    border-right: 2px solid #333;
+}
+
+#left_chapters {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#left_chapters li {
+    margin-bottom: 7px;
+    border-radius: 5px;
+    background-color: #f7bd5e38;
+}
+
+#left_chapters li a {
+    text-decoration: none;
+    color: #ffffffe4; /* Цвет текста пунктов меню */
+    font-size: 16px; /* Размер шрифта пунктов меню */
+    display: block;
+    padding: 8px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#left_chapters li.selected {
+    background-color: #333; /* Цвет фона активного пункта меню */
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #ffffffe4;
+    padding: 8px;
+}
+
+#left_chapters li a:hover {
+    background-color: #444; /* Цвет фона при наведении на пункт меню */
+}
+
+/* Стиль для блока контента */
 .content {
-    padding: 40px 20px 20px 40px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-ul.breadcrumbs {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    font-size: 20px;
-    font-family: Sans-serif, Arial, Tahoma;
-}
-
-ul.breadcrumbs li {
-    display: inline-block;
-}
-
-ul.breadcrumbs li a {
-    color: #0059b2;
-    text-decoration: none;
-}
-
-ul.breadcrumbs li a:hover {
-    color: #CC0000;
-}
-
-ul.breadcrumbs li:after {
-    padding: 0 10px 0 10px;
-    content: "\2192";
-}
-
-ul.breadcrumbs li.last:after {
-    content: "";
-}
-
-ul.control {
-    margin: 0;
-    padding: 60px 0 0 0;
-    list-style: none;
-    font-family: Sans-serif, Arial, Tahoma;
-    font-size: 18px;
-    width: 100%;
-}
-
-ul.control li {
-    float: left;
-    padding: 0 0 0 10px;
-}
-
-ul.control li.first:before {
-    content: "\2190";
-    padding: 0 10px 0 0;
-}
-
-ul.control li.last {
-    float: right;
-    padding: 0 40px 0 0;
-}
-
-ul.control li.last:after {
-    content: "\2192";
-    padding: 0 0 0 10px;
-}
-
-ul.control li a {
-    color: #0059b2;
-    text-decoration: none;
-}
-
-ul.control li a:hover {
-    color: #CC0000;
-}
-
-ul.content-table {
-    margin: 0;
-    padding: 60px 0 0 30px;
-    list-style: none;
-    font-family: Sans-serif, Arial, Tahoma;
-    font-size: 28px;
-}
-
-ul.content-table li {
-    margin: 0 0 40px 0;
-}
-
-ul.content-table li a {
-    color: #BB5715;
-    text-decoration: none;
-}
-
-ul.content-table li a:hover {
-    color: #F0711C;
-}
-
-.content-text {
-    margin: 60px 0 0 30px;
-    color: #000;
-    font-size: 20px;
-    font-family: Yandex Sans Display Light;
-}
-
-.content-text h1 {
-    font-size: 32px;
-}
-
-ul.lang-list {
-    list-style: none;
-    margin: 0;
-    padding: 14px 0 0 0;
-    background: #3F4137;
-    width: 100%;
-    height: 50px;
-    border-top: 1px solid #959A82;
-    box-sizing: border-box;
-    font-size: 18px;
-    font-family: Sans-serif, Arial, Tahoma;
-}
-
-ul.lang-list li {
-    display: inline-block;
-    margin-left: 40px;
-}
-
-ul.lang-list li.selected {
-    color: #fdc073;
-    border-bottom: 1px solid #fdc073;
-}
-
-ul.lang-list li a {
-    color: #eee;
-    text-decoration: none;
-}
-
-ul.lang-list li a:hover {
-    color: #fdc073;
-}
-
-.topic-subject .topic-line {
-    border-bottom: 1px solid #CC0000;
-    margin-top: -16px;
-}
-
-.topic-subject .topic-text {
-    display: inline-block;
-    font-size: 28px;
-    color: #777;
-    padding: 0 10px 0 10px;
-    margin-left: 30px;
-    background: #fff;
-    font-family: Sans-serif, Arial, Tahoma;
-}
-
-.list-topic {
-    margin: 40px 0 60px 0;
-    font-family: Sans-serif, Arial, Tahoma;
-}
-
-.list-topic p {
-    margin: 0;
-    font-size: 28px;
-}
-
-.list-topic ol {
-    columns: 2;
-    -webkit-columns: 2;
-    column-gap: 40px;
-}
-
-.list-topic ol li {
-    display: list-item;
-    margin: 10px 10px 0 0px;
-    padding: 0 0 0 10px;
-}
-
-.list-topic ol li a {
-    color: #0059b2;
-    text-decoration: none;
-}
-
-.list-topic ol li a:hover {
-    color: #CC0000;
-}
-
-.highlight {
-    max-width: 350px;
-    padding: 0 10px 0 10px;
-    margin: 0;
-    overflow: auto;
-    overflow-y: hidden;
-    background: #f0f0f0;
-}
-
-.highlight p {
-    margin: 0;
-}
-
-.highlight .block {
-    width: 100%;
-    margin: 0;
-}
-
-.highlight .block p {
-    margin: 0;
-}
-
-.quote {
-    background: url('../images/blockquote.png') no-repeat 0 10px;
-    padding: 5px 5px 5px 70px;
-    font-family: Sans-serif, Arial, Tahoma;
-    font-style: italic;
-}
-
-#footer {
-    box-sizing: border-box;
-    background: #fbc98e;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
     padding: 10px;
-    color: #0e0909;
+}
+
+/* Стиль для хлебных крошек */
+.content .breadcrumbs {
+    margin-bottom: 20px;
     font-size: 14px;
-    font-family: Verdana, Geneva, Arial, Helvetica;
-    text-align: left;
-    overflow: hidden;
+    color: #555; /* Цвет текста хлебных крошек */
 }
 
-#footer a {
-    text-decoration: underline;
-    color: #aaa;
+/* Стиль для текстового контента */
+.content-text {
+    padding: 10px 20px 30px 40px;
 }
 
-.form-input {
-    width: 300px;
-    font-size: 16px;
-}
-
-.form-label {
-    display: inline-block;
-    min-width: 150px;
-    vertical-align: top;
-}
-
-.form-error ul {
-    list-style: none;
+ul.list-article {
     padding: 0;
-    color: #CC0000;
+    margin: 0 30px 0 0;
+    list-style: none;
 }
 
-.form-button {
-    min-width: 200px;
-    font-size: 16px;
+.article-item {
+    display: flex;
+    margin: 20px 0 25px 0;
+    background-color: #cbb79530;
+    border-radius: 10px;
 }
+
+img.preview {
+    width: 200px;
+    height: 260px;
+    object-fit: fill;
+    border: black solid 1px;
+    border-radius: 10px;
+    margin-right: 20px; /* Расстояние между картинкой и текстом */
+}
+
+div.block-content {
+    display: flex;
+    flex-direction: column;
+}
+
+div.block-content h2 {
+    font-size: 30px;
+    margin: 0 0 30px 0; /* Расстояние между заголовком и текстом */
+}
+
+div.block-content div.text-content {
+    font-size: 20px;
+    max-width: 950px;
+}
+
+.btn-link-read {
+    display: flex;
+    align-items: flex-end; /* Выравнивание элементов по нижней линии */
+    margin-bottom: 10px;
+}
+
+.btn-link-read a {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid #1f5b83;
+    background-color: #3498db;
+    color: #ffffff;
+    transition: background-color 0.5s, color 0.5s;
+    cursor: pointer;
+}
+
+.btn-link-read a:hover {
+    background-color: #2980b9;
+    color: #ffffff;
+}
+
+/* Стиль для подвала */
+footer {
+    background-color: #333; /* Цвет фона подвала */
+    color: #ffffffe4; /* Цвет текста подвала */
+    padding: 10px 20px;
+    text-align: center;
+}
+
+

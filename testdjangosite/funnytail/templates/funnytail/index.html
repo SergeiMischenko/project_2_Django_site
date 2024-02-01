@@ -1,17 +1,24 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
-<ul class="list-articles">
-	{% for p in posts %}
-	{% if p.is_published %}
-			<li><h2>{{p.title}}</h2>
-    {% autoescape off %}
-	{{p.content|linebreaks|truncatewords:40}}
-    {% endautoescape %}
-			<div class="clear"></div>
-			<p class="link-read-post"><a href="{% url 'post' p.id %}">Читать пост</a></p>
-			</li>
-	{% endif %}
-	{% endfor %}
-</ul>
+	<ul class="list-article">
+		{% for post in posts %}
+			{% if post.is_published %}
+				<li class="article-item">
+					<img class="preview" src="{% static 'funnytail/images' %}{{ post.preview }}" alt="{{ post.title }}">
+					<div class="block-content">
+						<h2>{{ post.title }}</h2>
+						<div class="text-content">{{ post.content|truncatewords:50 }}</div>
+					</div>
+					<div class="btn-link-read">
+						<a href="{% url 'post' post.id %}">Читать пост</a>
+					</div>
+				</li>
+				{% if not forloop.last %}
+					<hr>
+				{% endif %}
+			{% endif %}
+		{% endfor %}
+	</ul>
 {% endblock %}
