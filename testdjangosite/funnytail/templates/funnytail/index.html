@@ -4,20 +4,18 @@
 {% block content %}
 	<ul class="list-article">
 		{% for post in posts %}
-			{% if post.is_published %}
-				<li class="article-item">
-					<img class="preview" src="{% static 'funnytail/images' %}{{ post.preview }}" alt="{{ post.title }}">
-					<div class="block-content">
-						<h2>{{ post.title }}</h2>
-						<div class="text-content">{{ post.content|truncatewords:50 }}</div>
-					</div>
-					<div class="btn-link-read">
-						<a href="{% url 'post' post.id %}">Читать пост</a>
-					</div>
-				</li>
-				{% if not forloop.last %}
-					<hr>
-				{% endif %}
+			<li class="article-item">
+				<img class="preview" src="{% static 'funnytail/images' %}{{ post.preview }}" alt="{{ post.title }}">
+				<div class="block-content">
+					<h2>{{ post.title }}</h2>
+					<div class="text-content">{{ post.content|linebreaks|truncatewords:40 }}</div>
+				</div>
+				<div class="btn-link-read">
+					<a href="{{ post.get_absolute_url }}">Читать пост</a>
+				</div>
+			</li>
+			{% if not forloop.last %}
+				<hr>
 			{% endif %}
 		{% endfor %}
 	</ul>

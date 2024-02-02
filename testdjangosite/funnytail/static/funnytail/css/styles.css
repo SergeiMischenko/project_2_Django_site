@@ -179,15 +179,15 @@ div.block-content div.text-content {
     text-align: center;
     text-decoration: none;
     border-radius: 5px;
-    border: 2px solid #1f5b83;
-    background-color: #3498db;
+    border: 1px solid #000;
+    background-color: #786c58e6;
     color: #ffffff;
     transition: background-color 0.5s, color 0.5s;
     cursor: pointer;
 }
 
 .btn-link-read a:hover {
-    background-color: #2980b9;
+    background-color: #444;
     color: #ffffff;
 }
 

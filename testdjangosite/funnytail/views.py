@@ -1,5 +1,7 @@
 from django.http import HttpResponse, HttpRequest, HttpResponseNotFound
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
+
+from .models import Cats
 
 menu = [{'title': 'О сайте', 'url_name': 'about'},
         {'title': 'Добавить статью', 'url_name': 'add_page'},
@@ -38,7 +40,8 @@ data_db = [
 
 
 def index(request: HttpRequest):
-    data = {'title': 'Главная страница', 'menu': menu, 'posts': data_db, 'category_selected': 0,}
+    posts = Cats.published.all()
+    data = {'title': 'Главная страница', 'menu': menu, 'posts': posts, 'category_selected': 0,}
     return render(request, 'funnytail/index.html', context=data)
 
 
@@ -65,8 +68,15 @@ def show_categories(request: HttpRequest, category_id):
     return render(request, 'funnytail/index.html', context=data)
 
 
-def show_post(request: HttpRequest, post_id):
-    return HttpResponse(f"Отображение статьи с id = {post_id}")
+def show_post(request: HttpRequest, post_slug):
+    post = get_object_or_404(Cats, slug=post_slug)
+    data = {
+        'title': post.title,
+        'menu': menu,
+        'post': post,
+        'category_selected': 0,
+    }
+    return render(request, 'funnytail/post.html', context=data)
 
 
 def page_not_found(request: HttpRequest, exception):
