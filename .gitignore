@@ -155,3 +155,5 @@ GitHub.sublime-settings
 /.idea/project_2_Django_site.iml
 /.idea/vcs.xml
 /.idea/.gitignore
+/testdjangosite/funnytail/static/funnytail/css/styles-копия.css
+/testdjangosite/templates/base — копия.html

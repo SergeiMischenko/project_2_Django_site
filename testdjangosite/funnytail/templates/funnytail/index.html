@@ -5,14 +5,23 @@
 	<ul class="list-article">
 		{% for post in posts %}
 			<li class="article-item">
-				<img class="preview" src="{% static 'funnytail/images' %}{{ post.preview }}" alt="{{ post.title }}">
-				<div class="block-content">
-					<h2>{{ post.title }}</h2>
-					<div class="text-content">{{ post.content|linebreaks|truncatewords:40 }}</div>
+				<img class="preview" src="{% static 'funnytail/images' %}/{{ post.slug|add:'.jpg' }}" alt="{{ post.slug }}">
+				<div>
+					<div class="content-head">
+						<p class="first">Порода: {{ post.breed.name }}</p>
+						<p class="last">Дата: {{ post.time_update|date:"d-m-Y H:i:s" }}</p>
+					</div>
+					<div class="block-content">
+						<h2>{{ post.title }}</h2>
+						<div class="text-content">
+							{{ post.content|linebreaks|truncatewords:40 }}
+						</div>
+					</div>
+					<div class="btn-link-read">
+						<a href="{{ post.get_absolute_url }}">Читать пост</a>
+					</div>
 				</div>
-				<div class="btn-link-read">
-					<a href="{{ post.get_absolute_url }}">Читать пост</a>
-				</div>
+
 			</li>
 			{% if not forloop.last %}
 				<hr>

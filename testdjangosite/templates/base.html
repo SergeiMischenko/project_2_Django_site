@@ -36,12 +36,15 @@
 	<!-- Sidebar слева -->
 	<aside class="left-chapters">
 		<ul id="left_chapters">
-			{% if not category_selected or category_selected is None %}
+			{% if not category_selected %}
 				<li class="selected">Все породы</li>
 			{% else %}
 				<li><a href="{% url 'home' %}">Все породы</a></li>
 			{% endif %}
 			{% show_categories category_selected %}
+			<li class="tags">
+				{% show_all_tags %}
+			</li>
 		</ul>
 	</aside>
 

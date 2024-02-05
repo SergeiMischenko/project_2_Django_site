@@ -1,5 +1,24 @@
 {% extends 'base.html' %}
 
+{% block breadcrumbs %}
+	<!-- Теги -->
+	{% with post.tags.all as tags %}
+		{% if tags %}
+			<ul class="breadcrumbs">
+				<li>Теги:</li>
+				{% for tag in tags %}
+					{% if not forloop.last %}
+						<li>
+							{% else %}
+						<li class="last">
+					{% endif %}
+				<a href="{{ tag.get_absolute_url }}">{{ tag.tag }}</a></li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+	{% endwith %}
+{% endblock %}
+
 {% block content %}
 	<h1>{{ post.title }}</h1>
 	{% if post.preview %}
