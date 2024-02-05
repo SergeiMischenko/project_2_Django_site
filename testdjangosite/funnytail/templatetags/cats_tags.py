@@ -9,10 +9,10 @@ register = template.Library()
 
 @register.inclusion_tag('funnytail/list_categories.html')
 def show_categories(category_selected=0):
-    categories = Breed.objects.annotate(total=Count("posts")).filter(total__gt=0)
+    categories = Breed.objects.filter(posts__gte=1).distinct()
     return {'categories': categories, 'category_selected': category_selected}
 
 
 @register.inclusion_tag('funnytail/list_tags.html')
 def show_all_tags():
-    return {'tags': TagPosts.objects.annotate(total=Count("posts")).filter(total__gt=0)}
+    return {'tags': TagPosts.objects.filter(posts__gte=1).distinct()}
