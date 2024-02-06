@@ -36,7 +36,7 @@
 	<!-- Sidebar слева -->
 	<aside class="left-chapters">
 		<ul id="left_chapters">
-			{% if not category_selected %}
+			{% if category_selected == 0 %}
 				<li class="selected">Все породы</li>
 			{% else %}
 				<li><a href="{% url 'home' %}">Все породы</a></li>

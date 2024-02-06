@@ -1,5 +1,8 @@
 from django.db import models
+from django.template.defaultfilters import slugify
 from django.urls import reverse
+
+# from transliterate import translit
 
 
 class PublishedManager(models.Manager):
@@ -9,6 +12,8 @@ class PublishedManager(models.Manager):
 
 class Cats(models.Model):
     class Meta:
+        verbose_name = 'Кошки'
+        verbose_name_plural = 'Кошки'
         ordering = ['title']
         indexes = [
             models.Index(fields=['title']),
@@ -18,14 +23,15 @@ class Cats(models.Model):
         DRAFT = 0, 'Черновик'
         PUBLISHED = 1, 'Опубликовано'
 
-    title = models.CharField(max_length=255)
-    slug = models.SlugField(max_length=255, unique=True, db_index=True)
-    content = models.TextField(blank=True)
-    time_create = models.DateTimeField(auto_now_add=True)
-    time_update = models.DateTimeField(auto_now=True)
-    is_published = models.BooleanField(choices=Status.choices, default=Status.PUBLISHED)
-    breed = models.ForeignKey('Breed', on_delete=models.PROTECT, related_name='posts')
-    tags = models.ManyToManyField('TagPosts', blank=True, related_name='posts')
+    title = models.CharField(max_length=255, verbose_name='Кличка')
+    slug = models.SlugField(max_length=255, unique=True, db_index=True, verbose_name='Slug')
+    content = models.TextField(blank=True, verbose_name='Текст статьи')
+    time_create = models.DateTimeField(auto_now_add=True, verbose_name='Время создание')
+    time_update = models.DateTimeField(auto_now=True, verbose_name='Время обновления')
+    is_published = models.BooleanField(choices=tuple(map(lambda x: (bool(x[0]), x[1]),  Status.choices)),
+                                       default=Status.PUBLISHED, verbose_name='Статус')
+    breed = models.ForeignKey('Breed', on_delete=models.PROTECT, related_name='posts', verbose_name='Порода')
+    tags = models.ManyToManyField('TagPosts', blank=True, related_name='posts', verbose_name='Теги')
 
     objects = models.Manager()
     published = PublishedManager()
@@ -36,9 +42,18 @@ class Cats(models.Model):
     def get_absolute_url(self):
         return reverse('post', kwargs={'post_slug': self.slug})
 
+    # def save(self, *args, **kwargs):
+    #     self.slug = slugify(translit(self.title, 'ru', reversed=True))
+    #     super().save(*args, **kwargs)
+
+
 
 class Breed(models.Model):
-    name = models.CharField(max_length=100, db_index=True)
+    class Meta:
+        verbose_name = 'Порода'
+        verbose_name_plural = 'Породы'
+
+    name = models.CharField(max_length=100, db_index=True, verbose_name='Порода')
     slug = models.SlugField(max_length=255, unique=True, db_index=True)
 
     def __str__(self):

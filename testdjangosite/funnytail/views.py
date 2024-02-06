@@ -8,22 +8,9 @@ menu = [{'title': 'О сайте', 'url_name': 'about'},
         {'title': 'Обратная связь', 'url_name': 'contact'},
         {'title': 'Войти', 'url_name': 'login'}]
 
-cats_db = [
-    {'id': 1, 'name': 'Персидская'},
-    {'id': 2, 'name': 'Сиамская'},
-    {'id': 3, 'name': 'Сибирская'},
-    {'id': 4, 'name': 'Британская короткошерстная'},
-    {'id': 5, 'name': 'Русская голубая'},
-    {'id': 6, 'name': 'Скоттиш-фолд'},
-    {'id': 7, 'name': 'Мейн-кун'},
-    {'id': 8, 'name': 'Невская маскарадная'},
-    {'id': 9, 'name': 'Ориентальная короткошерстная'},
-    {'id': 10, 'name': 'Сфинкс'},
-]
-
 
 def index(request: HttpRequest):
-    posts = Cats.published.all()
+    posts = Cats.published.all().select_related('breed')
     data = {'title': 'Главная страница', 'menu': menu, 'posts': posts, 'category_selected': 0, }
     return render(request, 'funnytail/index.html', context=data)
 
@@ -47,7 +34,7 @@ def about(request: HttpRequest):
 
 def show_categories(request: HttpRequest, category_slug):
     category = get_object_or_404(Breed, slug=category_slug)
-    posts = Cats.published.filter(breed_id=category.pk)
+    posts = Cats.published.filter(breed_id=category.pk).select_related('breed')
     data = {
         'title': f'Порода: {category.name}',
         'menu': menu,
@@ -70,7 +57,7 @@ def show_post(request: HttpRequest, post_slug):
 
 def show_tag_postlist(request: HttpRequest, tag_slug):
     tag = get_object_or_404(TagPosts, slug=tag_slug)
-    posts = tag.posts.filter(is_published=Cats.Status.PUBLISHED)
+    posts = tag.posts.filter(is_published=Cats.Status.PUBLISHED).select_related('breed')
 
     data = {
         'title': f'Тег: {tag.tag}',
@@ -79,6 +66,7 @@ def show_tag_postlist(request: HttpRequest, tag_slug):
         'category_selected': None,
     }
     return render(request, 'funnytail/index.html', context=data)
+
 
 def page_not_found(request: HttpRequest, exception):
     data = {'title': 'Ошибка 404, страница не найдена', 'body': 'Страница не найдена'}
