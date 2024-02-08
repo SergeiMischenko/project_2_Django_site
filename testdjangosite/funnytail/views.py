@@ -1,6 +1,7 @@
 from django.http import HttpResponse, HttpRequest, HttpResponseNotFound
 from django.shortcuts import render, redirect, get_object_or_404
 
+from .forms import AddPostForm
 from .models import Cats, Breed, TagPosts
 
 menu = [{'title': 'О сайте', 'url_name': 'about'},
@@ -15,8 +16,20 @@ def index(request: HttpRequest):
     return render(request, 'funnytail/index.html', context=data)
 
 
-def addpage(request: HttpRequest) -> HttpResponse:
-    return HttpResponse("<h1>Добавление статьи</h1>")
+def addpage(request: HttpRequest):
+    if request.method == 'POST':
+        form = AddPostForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('post', post_slug=form.cleaned_data['slug'])
+    else:
+        form = AddPostForm()
+    data = {
+        'menu': menu,
+        'title': 'Форма для добавление статьи',
+        'form': form
+    }
+    return render(request, 'funnytail/addpage.html', context=data)
 
 
 def contact(request: HttpRequest) -> HttpResponse:

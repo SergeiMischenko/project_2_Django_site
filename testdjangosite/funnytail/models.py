@@ -2,6 +2,7 @@ from django.db import models
 from django.template.defaultfilters import slugify
 from django.urls import reverse
 
+
 # from transliterate import translit
 
 
@@ -28,7 +29,7 @@ class Cats(models.Model):
     content = models.TextField(blank=True, verbose_name='Текст статьи')
     time_create = models.DateTimeField(auto_now_add=True, verbose_name='Время создание')
     time_update = models.DateTimeField(auto_now=True, verbose_name='Время обновления')
-    is_published = models.BooleanField(choices=tuple(map(lambda x: (bool(x[0]), x[1]),  Status.choices)),
+    is_published = models.BooleanField(choices=tuple(map(lambda x: (bool(x[0]), x[1]), Status.choices)),
                                        default=Status.PUBLISHED, verbose_name='Статус')
     breed = models.ForeignKey('Breed', on_delete=models.PROTECT, related_name='posts', verbose_name='Порода')
     tags = models.ManyToManyField('TagPosts', blank=True, related_name='posts', verbose_name='Теги')
@@ -45,7 +46,6 @@ class Cats(models.Model):
     # def save(self, *args, **kwargs):
     #     self.slug = slugify(translit(self.title, 'ru', reversed=True))
     #     super().save(*args, **kwargs)
-
 
 
 class Breed(models.Model):

@@ -136,7 +136,6 @@ ul.tags-list li a {
 }
 
 
-
 /* Стиль для блока контента */
 .content {
     flex: 1;
@@ -156,7 +155,7 @@ ul.tags-list li a {
     list-style: none;
 }
 
-.content ul.breadcrumbs li a{
+.content ul.breadcrumbs li a {
     color: #0059b2;
     padding: 2px;
     text-decoration: none;
@@ -212,7 +211,7 @@ div.content-head {
     margin: 10px 10px 10px 0;
     font-size: 18px;
     font-style: italic;
-    color: #555 ;
+    color: #555;
     background-color: #816e541a;
     border-radius: 7px;
 }
@@ -262,6 +261,73 @@ div.text-content {
 .btn-link-read a:hover {
     background-color: #444;
     color: #ffffff;
+}
+
+/* Стили для формы */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для полей ввода */
+.form-label {
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    min-width: 160px;
+}
+
+input[type="text"],
+#id_breed,
+textarea {
+    width: 200px;
+    padding: 5px;
+    font-size: 15px;
+    margin-bottom: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+
+div #id_tags {
+    display: flex;
+    flex-wrap: wrap;
+}
+div #id_tags label {
+    cursor: pointer;
+}
+
+textarea {
+    height: 200px; /* Для поля ввода текста */
+    width: 100%;
+    font-size: 16px;
+}
+
+/* Стили для кнопки отправки */
+button[type="submit"] {
+    background-color: #555555cc;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #222;
+    transition: background-color 0.5s ease;
+}
+
+/* Стили для ошибок */
+.form-error {
+    color: red;
+    margin-top: 5px;
 }
 
 /* Стиль для подвала */
