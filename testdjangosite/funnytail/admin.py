@@ -1,15 +1,16 @@
 from django.contrib import admin, messages
+from django.utils.safestring import mark_safe
 
 from funnytail.models import Cats, Breed
 
 
 @admin.register(Cats)
 class CatAdmin(admin.ModelAdmin):
-    fields = ['title', 'slug', 'content', 'breed', 'tags', 'is_published']
-    # readonly_fields = ['slug']
+    fields = ['title', 'slug', 'content', 'preview', 'post_preview', 'breed', 'tags', 'is_published']
+    readonly_fields = ['post_preview']
     prepopulated_fields = {'slug': ('title',)}
     filter_horizontal = ['tags']
-    list_display = ('title', 'time_create', 'is_published', 'breed', 'brief_info')
+    list_display = ('title', 'post_preview', 'time_create', 'is_published', 'breed')
     list_display_links = ('title',)
     ordering = ['-time_create', 'title']
     list_editable = ('is_published',)
@@ -17,10 +18,13 @@ class CatAdmin(admin.ModelAdmin):
     actions = ['set_published', 'set_draft']
     search_fields = ['title', 'breed__name']
     list_filter = ['breed__name', 'is_published']
+    save_on_top = True
 
-    @admin.display(description='Краткое описание', ordering='content')
-    def brief_info(self, cats: Cats):
-        return f'Описание {len(cats.content)} символов.'
+    @admin.display(description='Изображение', ordering='content')
+    def post_preview(self, cats: Cats):
+        if cats.preview:
+            return mark_safe(f'<img src="{cats.preview.url}" width=50>')
+        return 'Без фото'
 
     @admin.action(description='Опубликовать выбранные записи')
     def set_published(self, request, queryset):

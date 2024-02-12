@@ -26,6 +26,7 @@ class Cats(models.Model):
 
     title = models.CharField(max_length=255, verbose_name='Кличка')
     slug = models.SlugField(max_length=255, unique=True, db_index=True, verbose_name='Slug')
+    preview = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True, default=None, null=True, verbose_name='Фото')
     content = models.TextField(blank=True, verbose_name='Текст статьи')
     time_create = models.DateTimeField(auto_now_add=True, verbose_name='Время создание')
     time_update = models.DateTimeField(auto_now=True, verbose_name='Время обновления')

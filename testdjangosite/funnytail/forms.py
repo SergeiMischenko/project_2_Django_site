@@ -9,7 +9,7 @@ class AddPostForm(forms.ModelForm):
 
     class Meta:
         model = Cats
-        fields = ['title', 'slug', 'content', 'is_published', 'breed', 'tags']
+        fields = ['title', 'slug', 'content', 'preview', 'is_published', 'breed', 'tags']
         labels = {
             'slug': 'URL'
         }

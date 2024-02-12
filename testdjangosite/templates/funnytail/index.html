@@ -5,7 +5,9 @@
 	<ul class="list-article">
 		{% for post in posts %}
 			<li class="article-item">
-				<img class="preview" src="{% static 'funnytail/images' %}/{{ post.slug|add:'.jpg' }}" alt="{{ post.slug }}">
+				{% if post.preview %}
+					<p><img class="preview" src="{{ post.preview.url }}"></p>
+				{% endif %}
 				<div>
 					<div class="content-head">
 						<p class="first">Порода: {{ post.breed.name }}</p>
