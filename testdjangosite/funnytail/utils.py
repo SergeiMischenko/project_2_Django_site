@@ -9,6 +9,7 @@ menu = [
 class DataMixin:
     title_page = None
     category_selected = None
+    paginate_by = 10
     extra_context = {}
 
     def __init__(self):

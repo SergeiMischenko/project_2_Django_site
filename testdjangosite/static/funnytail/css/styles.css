@@ -298,6 +298,7 @@ div #id_tags {
     display: flex;
     flex-wrap: wrap;
 }
+
 div #id_tags label {
     cursor: pointer;
 }
@@ -329,6 +330,51 @@ button[type="submit"]:hover {
     color: red;
     margin-top: 5px;
 }
+
+/* Стили для навигации по страницам */
+.content-navigation {
+    display: flex;
+    flex-grow: 1;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.list-pages ul {
+    list-style: none; /* Убираем стандартные маркеры списка */
+    padding: 0;
+}
+
+.list-pages ul li {
+    display: inline-block; /* Размещаем элементы горизонтально */
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+.list-pages ul li.page-num a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #555;
+    background-color: #fff;
+    border-radius: 12px;
+    border: 2px solid #aaa;
+    transition: background-color 0.5s, color 0.3s;
+}
+
+.list-pages ul li.page-num a:hover {
+    background-color: #555;
+    border: 2px solid #777;
+    color: #fff; /* Цвет текста при наведении */
+}
+
+.list-pages ul li.page-num.page-num-selected {
+    padding: 12px 16px;
+    border-radius: 12px;
+    border: 2px solid #777;
+    background-color: #999; /* Цвет фона выбранной страницы */
+    color: #fff; /* Цвет текста выбранной страницы */
+}
+
 
 /* Стиль для подвала */
 footer {
