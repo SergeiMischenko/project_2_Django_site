@@ -42,7 +42,9 @@ class Cats(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse('post', kwargs={'post_slug': self.slug})
+        if self.is_published:
+            return reverse('post', kwargs={'post_slug': self.slug})
+        return reverse('home')
 
     # def save(self, *args, **kwargs):
     #     self.slug = slugify(translit(self.title, 'ru', reversed=True))

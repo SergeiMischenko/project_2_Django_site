@@ -1,46 +1,37 @@
-from django.http import HttpResponse, HttpRequest, HttpResponseNotFound
+from django.http import HttpResponse, HttpRequest
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse_lazy
-from django.views import View
-from django.views.generic import ListView, DetailView, FormView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView
 
-from .forms import AddPostForm
+from .forms import PostForm
 from .models import Cats, Breed, TagPosts
-
-menu = [{'title': 'О сайте', 'url_name': 'about'},
-        {'title': 'Добавить статью', 'url_name': 'add_page'},
-        {'title': 'Обратная связь', 'url_name': 'contact'},
-        {'title': 'Войти', 'url_name': 'login'}]
+from .utils import DataMixin
 
 
-class CatsHome(ListView):
+class CatsHome(DataMixin, ListView):
     template_name = 'funnytail/index.html'
     context_object_name = 'posts'
-    extra_context = {
-        'title': 'Главная страница',
-        'menu': menu,
-        'category_selected': 0,
-    }
+    title_page = 'Главная страница'
+    category_selected = 0
 
     def get_queryset(self):
         return Cats.published.all().select_related('breed')
 
 
-class AddPage(FormView):
-    form_class = AddPostForm
+class AddPage(DataMixin, CreateView):
+    form_class = PostForm
     template_name = 'funnytail/addpage.html'
-    success_url = reverse_lazy('post', post_slug=form_class.base_fields['slug'])
-    extra_context = {
-        'menu': menu,
-        'title': 'Форма для добавление статьи',
-    }
-
-    def form_valid(self, form):
-        form.save()
-        return super().form_valid(form)
+    title_page = 'Форма для добавление статьи'
 
 
-class CatsCategoryList(ListView):
+class UpdatePage(DataMixin, UpdateView):
+    model = Cats
+    fields = ['title', 'content', 'preview', 'is_published', 'breed', 'tags']
+    template_name = 'funnytail/addpage.html'
+    title_page = 'Редактирование поста'
+
+
+class CatsCategoryList(DataMixin, ListView):
     template_name = 'funnytail/index.html'
     context_object_name = 'posts'
     allow_empty = False
@@ -51,28 +42,27 @@ class CatsCategoryList(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         breed = context['posts'][0].breed
-        context['title'] = 'Порода - ' + breed.name
-        context['menu'] = menu
-        context['category_selected'] = breed.pk
-        return context
+        return self.get_mixin_context(
+            context,
+            title='Порода - ' + breed.name,
+            category_selected=breed.pk
+        )
 
 
-class PostView(DetailView):
+class PostView(DataMixin, DetailView):
     template_name = 'funnytail/post.html'
     context_object_name = 'post'
     slug_url_kwarg = 'post_slug'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['title'] = context['post'].title
-        context['menu'] = menu
-        return context
+        return self.get_mixin_context(context, title=context['post'].title)
 
     def get_object(self, queryset=None):
         return get_object_or_404(Cats.published, slug=self.kwargs[self.slug_url_kwarg])
 
 
-class CatsTagList(ListView):
+class CatsTagList(DataMixin, ListView):
     template_name = 'funnytail/index.html'
     context_object_name = 'posts'
     allow_empty = False
@@ -83,10 +73,7 @@ class CatsTagList(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         tags = TagPosts.objects.get(slug=self.kwargs['tag_slug'])
-        context['title'] = 'Тег - ' + tags.tag
-        context['menu'] = menu
-        context['category_selected'] = None
-        return context
+        return self.get_mixin_context(context, title='Тег - ' + tags.tag)
 
 
 def contact(request: HttpRequest) -> HttpResponse:
@@ -98,7 +85,7 @@ def login(request: HttpRequest) -> HttpResponse:
 
 
 def about(request: HttpRequest):
-    data = {'title': 'О сайте', 'menu': menu}
+    data = {'title': 'О сайте'}
     return render(request, 'funnytail/about.html', context=data)
 
 
