@@ -264,13 +264,32 @@ div.text-content {
 }
 
 /* Стили для формы */
-form {
+.form-addpage, .form-login {
     max-width: 500px;
     margin: 0 auto;
     padding: 20px;
     background: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-logout {
+    display: inline-block;
+}
+
+.form-logout > button.logout {
+    color: #ffffffe4; /* Цвет текста пунктов меню */
+    font-weight: bold;
+    font-size: 18px; /* Размер шрифта пунктов меню */
+    background: none;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.6s ease;
+    cursor: pointer;
+}
+
+.form-logout > button.logout:hover {
+    background-color: #555;
 }
 
 /* Стили для полей ввода */
@@ -282,6 +301,7 @@ form {
 }
 
 input[type="text"],
+input[type="password"],
 #id_breed,
 textarea {
     width: 200px;
@@ -310,7 +330,7 @@ textarea {
 }
 
 /* Стили для кнопки отправки */
-button[type="submit"] {
+button.submit {
     background-color: #555555cc;
     color: white;
     font-size: 16px;

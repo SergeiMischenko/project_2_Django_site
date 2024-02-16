@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "debug_toolbar",
     'django_extensions',
     'funnytail.apps.FunnytailConfig',
+    'users.apps.UsersConfig',
 ]
 
 MIDDLEWARE = [
@@ -70,6 +71,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'users.context_processors.get_cats_context',
             ],
         },
     },
@@ -136,3 +138,6 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL = 'home'  # URL после авторизации
+LOGOUT_REDIRECT_URL = 'home'  # URL после выхода
