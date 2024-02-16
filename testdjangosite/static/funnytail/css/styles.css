@@ -264,7 +264,7 @@ div.text-content {
 }
 
 /* Стили для формы */
-.form-addpage, .form-login {
+.form-addpage, .form-login, .form-register {
     max-width: 500px;
     margin: 0 auto;
     padding: 20px;
@@ -302,6 +302,7 @@ div.text-content {
 
 input[type="text"],
 input[type="password"],
+input[type="email"],
 #id_breed,
 textarea {
     width: 200px;
@@ -340,7 +341,7 @@ button.submit {
     cursor: pointer;
 }
 
-button[type="submit"]:hover {
+button.submit:hover {
     background-color: #222;
     transition: background-color 0.5s ease;
 }

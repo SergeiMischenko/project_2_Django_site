@@ -1,10 +1,6 @@
 from django.contrib.auth import get_user_model
 from django.db import models
-from django.template.defaultfilters import slugify
 from django.urls import reverse
-
-
-# from transliterate import translit
 
 
 class PublishedManager(models.Manager):
