@@ -48,7 +48,6 @@ html, body {
     padding: 5px;
     border-radius: 10px;
     transition: background-color 0.6s ease;
-
 }
 
 .main_menu a:hover {
@@ -264,10 +263,10 @@ div.text-content {
 }
 
 /* Стили для формы */
-.form-addpage, .form-login, .form-register {
+.form-addpage, .form-login, .form-register, .form-profile, .form-password-change {
     max-width: 500px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 5px 20px 5px 20px;
     background: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -298,6 +297,24 @@ div.text-content {
     font-weight: bold;
     margin-bottom: 5px;
     min-width: 160px;
+}
+
+.change-password a {
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    background-color: #555555cc;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 8px;
+    transition: background-color 0.6s ease, color 0.6s ease;
+}
+
+.change-password a:hover {
+    background-color: #222;
+    color: #fff;
 }
 
 input[type="text"],
@@ -335,15 +352,16 @@ button.submit {
     background-color: #555555cc;
     color: white;
     font-size: 16px;
+    font-weight: bold;
     padding: 10px 20px;
     border: 2px solid black;
     border-radius: 8px;
     cursor: pointer;
+    transition: background-color 0.6s ease, color 0.6s ease;
 }
 
 button.submit:hover {
     background-color: #222;
-    transition: background-color 0.5s ease;
 }
 
 /* Стили для ошибок */
