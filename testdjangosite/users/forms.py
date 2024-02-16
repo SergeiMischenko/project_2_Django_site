@@ -4,6 +4,8 @@ from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 
 
 class LoginUserForm(AuthenticationForm):
+    username = forms.CharField(label='Логин или E-Mail')
+
     class Meta:
         model = get_user_model()
 
@@ -24,6 +26,6 @@ class RegisterUserForm(UserCreationForm):
 
     def clean_email(self):
         email = self.cleaned_data['email']
-        if get_user_model().objects.filter(email=email).exists:
+        if get_user_model().objects.filter(email=email).exists():
             raise forms.ValidationError('Такой E-Mail уже используется')
         return email
