@@ -1,3 +1,4 @@
+from django.contrib.auth import get_user_model
 from django.db import models
 from django.template.defaultfilters import slugify
 from django.urls import reverse
@@ -34,6 +35,8 @@ class Cats(models.Model):
                                        default=Status.PUBLISHED, verbose_name='Статус')
     breed = models.ForeignKey('Breed', on_delete=models.PROTECT, related_name='posts', verbose_name='Порода')
     tags = models.ManyToManyField('TagPosts', blank=True, related_name='posts', verbose_name='Теги')
+    author = models.ForeignKey(get_user_model(), on_delete=models.SET_NULL, null=True, default=None,
+                               related_name='posts', verbose_name='Автор')
 
     objects = models.Manager()
     published = PublishedManager()

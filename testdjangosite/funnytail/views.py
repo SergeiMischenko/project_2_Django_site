@@ -1,3 +1,4 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponse, HttpRequest
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse_lazy
@@ -18,13 +19,18 @@ class CatsHome(DataMixin, ListView):
         return Cats.published.all().select_related('breed')
 
 
-class AddPage(DataMixin, CreateView):
+class AddPage(LoginRequiredMixin, DataMixin, CreateView):
     form_class = PostForm
     template_name = 'funnytail/addpage.html'
     title_page = 'Форма для добавление статьи'
 
+    def form_valid(self, form):
+        cat = form.save(commit=False)
+        cat.author = self.request.user
+        return super().form_valid(form)
 
-class UpdatePage(DataMixin, UpdateView):
+
+class UpdatePage(LoginRequiredMixin, DataMixin, UpdateView):
     model = Cats
     fields = ['title', 'content', 'preview', 'is_published', 'breed', 'tags']
     template_name = 'funnytail/addpage.html'
@@ -77,11 +83,8 @@ class CatsTagList(DataMixin, ListView):
 
 
 def contact(request: HttpRequest) -> HttpResponse:
-    return HttpResponse("<h1>Обратная связь</h1>")
-
-
-def login(request: HttpRequest) -> HttpResponse:
-    return HttpResponse("<h1>Авторизация</h1>")
+    data = {'title': 'Обратная связь'}
+    return render(request, 'funnytail/contact.html', context=data)
 
 
 def about(request: HttpRequest):
