@@ -1,6 +1,11 @@
 from django.contrib.auth import get_user_model
 from django.db import models
 from django.urls import reverse
+from django_extensions.db.fields import AutoSlugField
+
+
+def get_user_path(instance, filename):
+    return f'preview/{instance.author}_user/{filename}'
 
 
 class PublishedManager(models.Manager):
@@ -23,7 +28,7 @@ class Cats(models.Model):
 
     title = models.CharField(max_length=255, verbose_name='Кличка')
     slug = models.SlugField(max_length=255, unique=True, db_index=True, verbose_name='Slug')
-    preview = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True, default=None, null=True, verbose_name='Фото')
+    preview = models.ImageField(upload_to=get_user_path, blank=True, default=None, null=True, verbose_name='Фото')
     content = models.TextField(blank=True, verbose_name='Текст статьи')
     time_create = models.DateTimeField(auto_now_add=True, verbose_name='Время создание')
     time_update = models.DateTimeField(auto_now=True, verbose_name='Время обновления')
@@ -54,6 +59,10 @@ class Breed(models.Model):
     class Meta:
         verbose_name = 'Порода'
         verbose_name_plural = 'Породы'
+        ordering = ['name']
+        indexes = [
+            models.Index(fields=['name']),
+        ]
 
     name = models.CharField(max_length=100, db_index=True, verbose_name='Порода')
     slug = models.SlugField(max_length=255, unique=True, db_index=True)
@@ -67,6 +76,8 @@ class Breed(models.Model):
 
 class TagPosts(models.Model):
     class Meta:
+        verbose_name = 'Тег'
+        verbose_name_plural = 'Теги'
         ordering = ['tag']
         indexes = [
             models.Index(fields=['tag']),

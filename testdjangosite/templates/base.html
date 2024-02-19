@@ -23,8 +23,20 @@
 			{% for menu_item in main_menu %}
 				<li><a href="{% url menu_item.url_name %}">{{ menu_item.title }}</a></li>
 			{% endfor %}
+
 			{% if user.is_authenticated %}
-				<li class="last"><a href="{% url 'users:profile' %}">{{ user.username }}</a> |
+				<li class="last">
+					{% if user.photo %}
+						<a class="menu-user-photo" href="{% url 'users:profile' %}">
+							<img src="{{ user.photo.url }}">
+							{{ user.username }}
+						</a>
+					{% else %}
+						<a class="menu-user-photo" href="{% url 'users:profile' %}">
+							<img src="{{ default_image }}">
+							{{ user.username }}</a>
+					{% endif %}
+					|
 					<form class="form-logout" method="post" action="{% url 'users:logout' %}">
 						{% csrf_token %}
 						<button class="logout" type="submit">Выйти</button>

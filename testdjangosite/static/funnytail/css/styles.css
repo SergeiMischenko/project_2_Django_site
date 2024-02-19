@@ -14,8 +14,8 @@ html, body {
     justify-content: space-between;
     align-items: center;
     padding: 5px 20px;
-    background-color: #333; /* Цвет фона шапки */
-    color: #fff; /* Цвет текста */
+    background-color: #333;
+    color: #fff;
 }
 
 /* Стиль для логотипа */
@@ -37,7 +37,8 @@ html, body {
 
 .main_menu li {
     margin-right: 30px; /* Расстояние между пунктами меню */
-
+    display: flex;
+    align-items: center;
 }
 
 .main_menu a {
@@ -55,7 +56,22 @@ html, body {
 }
 
 .main_menu li.last {
-    margin-right: 0; /* Убираем правый отступ у последнего пункта меню */
+    margin-right: 0;
+}
+
+.menu-user-photo {
+    display: flex;
+    margin: 0 5px 0 0;
+    align-items: center;
+    flex-direction: row;
+}
+
+.menu-user-photo img {
+    object-fit: cover;
+    margin-right: 5px;
+    width: 60px;
+    height: 60px;
+    border-radius: 30%;
 }
 
 /* Стиль для основного контента */
@@ -67,8 +83,8 @@ html, body {
 
 /* Стиль для боковой панели */
 .left-chapters {
-    width: 280px; /* Задайте необходимую ширину боковой панели */
-    background-color: #555; /* Цвет фона боковой панели */
+    width: 280px;
+    background-color: #555;
     padding: 5px;
     border-right: 2px solid #333;
 }
@@ -119,6 +135,7 @@ html, body {
     margin: 50px 0 0 0;
 }
 
+/* Стиль для тегов на боковой панели */
 ul.tags-list {
     width: 100%;
     margin: 0;
@@ -133,7 +150,6 @@ ul.tags-list li {
 ul.tags-list li a {
     border: 1px solid #aaa;
 }
-
 
 /* Стиль для блока контента */
 .content {
@@ -150,7 +166,7 @@ ul.tags-list li a {
     display: flex;
     margin-bottom: 20px;
     font-size: 14px;
-    color: #555; /* Цвет текста хлебных крошек */
+    color: #555;
     list-style: none;
 }
 
@@ -220,7 +236,6 @@ div.content-head p {
     margin: 0;
 }
 
-
 div.block-content {
     display: flex;
     flex-direction: column;
@@ -237,6 +252,7 @@ div.text-content {
     font-size: 20px;
 }
 
+/* Стиль для кнопки на посте читать  */
 .btn-link-read {
     display: flex;
     flex-direction: row-reverse;
@@ -262,7 +278,7 @@ div.text-content {
     color: #ffffff;
 }
 
-/* Стили для формы */
+/* Стили для форм */
 .form-addpage,
 .form-login,
 .form-register,
@@ -282,10 +298,7 @@ div.text-content {
     max-width: 430px;
 }
 
-.form-logout {
-    display: inline-block;
-}
-
+/* Стили для кнопок в формах форм */
 .form-logout > button.logout {
     color: #ffffffe4; /* Цвет текста пунктов меню */
     font-weight: bold;
@@ -299,6 +312,18 @@ div.text-content {
 
 .form-logout > button.logout:hover {
     background-color: #555;
+}
+
+/* Стили для фото в профиле */
+.profile-user-photo {
+    text-align: center;
+}
+
+.profile-user-photo img {
+    object-fit: contain;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
 }
 
 /* Стили для полей ввода */
@@ -351,7 +376,6 @@ textarea {
     border-radius: 5px;
     box-sizing: border-box;
 }
-
 
 div #id_tags {
     display: flex;
@@ -435,7 +459,6 @@ button.submit:hover {
     color: #fff; /* Цвет текста выбранной страницы */
 }
 
-
 /* Стиль для подвала */
 footer {
     background-color: #333; /* Цвет фона подвала */
@@ -443,5 +466,3 @@ footer {
     padding: 10px 20px;
     text-align: center;
 }
-
-

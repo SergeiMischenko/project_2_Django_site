@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponse, HttpRequest
 from django.shortcuts import render, redirect, get_object_or_404
@@ -16,7 +17,7 @@ class CatsHome(DataMixin, ListView):
     category_selected = 0
 
     def get_queryset(self):
-        return Cats.published.all().select_related('breed')
+        return Cats.published.all().select_related('breed', 'author')
 
 
 class AddPage(LoginRequiredMixin, DataMixin, CreateView):
@@ -43,7 +44,7 @@ class CatsCategoryList(DataMixin, ListView):
     allow_empty = False
 
     def get_queryset(self):
-        return Cats.published.filter(breed__slug=self.kwargs['category_slug']).select_related('breed')
+        return Cats.published.filter(breed__slug=self.kwargs['category_slug']).select_related('breed', 'author')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -74,7 +75,7 @@ class CatsTagList(DataMixin, ListView):
     allow_empty = False
 
     def get_queryset(self):
-        return Cats.published.filter(tags__slug=self.kwargs['tag_slug']).select_related('breed')
+        return Cats.published.filter(tags__slug=self.kwargs['tag_slug']).select_related('breed', 'author')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -83,12 +84,12 @@ class CatsTagList(DataMixin, ListView):
 
 
 def contact(request: HttpRequest) -> HttpResponse:
-    data = {'title': 'Обратная связь'}
+    data = {'title': 'Обратная связь', 'default_image': settings.DEFAULT_USER_IMAGE}
     return render(request, 'funnytail/contact.html', context=data)
 
 
 def about(request: HttpRequest):
-    data = {'title': 'О сайте'}
+    data = {'title': 'О сайте', 'default_image': settings.DEFAULT_USER_IMAGE}
     return render(request, 'funnytail/about.html', context=data)
 
 

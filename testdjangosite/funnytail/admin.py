@@ -1,14 +1,14 @@
 from django.contrib import admin, messages
 from django.utils.safestring import mark_safe
 
-from funnytail.models import Cats, Breed
+from funnytail.models import Cats, Breed, TagPosts
 
 
 @admin.register(Cats)
 class CatAdmin(admin.ModelAdmin):
-    fields = ['title', 'slug', 'content', 'preview', 'post_preview', 'breed', 'tags', 'is_published']
+    fields = ['title', 'slug', 'content', 'preview', 'post_preview', 'breed', 'tags', 'is_published', 'author']
     readonly_fields = ['post_preview']
-    prepopulated_fields = {'slug': ('title',)}
+    prepopulated_fields = {'slug': ('title', 'breed', 'author')}
     filter_horizontal = ['tags']
     list_display = ('title', 'post_preview', 'time_create', 'is_published', 'breed')
     list_display_links = ('title',)
@@ -41,4 +41,13 @@ class CatAdmin(admin.ModelAdmin):
 class BreedAdmin(admin.ModelAdmin):
     list_display = ('id', 'name')
     list_display_links = ('id', 'name')
+    prepopulated_fields = {'slug': ('name',)}
     ordering = ['name', 'id']
+
+
+@admin.register(TagPosts)
+class TagsAdmin(admin.ModelAdmin):
+    list_display = ('id', 'tag')
+    list_display_links = ('id', 'tag')
+    prepopulated_fields = {'slug': ('tag',)}
+    ordering = ['tag', 'id']
