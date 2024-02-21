@@ -339,7 +339,7 @@ div.text-content {
     justify-content: space-between;
 }
 
-.change-password a {
+.change-password a, .user-posts a {
     text-decoration: none;
     text-align: center;
     color: white;
@@ -351,8 +351,15 @@ div.text-content {
     border-radius: 8px;
     transition: background-color 0.6s ease, color 0.6s ease;
 }
+.user-posts a {
+    display: flex;
+    justify-content: center;
+    background-color: #0059b2;
+    width: auto;
 
-.change-password a:hover {
+}
+
+.change-password a:hover, .user-posts a:hover {
     background-color: #222;
     color: #fff;
 }
@@ -392,8 +399,12 @@ textarea {
     font-size: 16px;
 }
 
+.buttons-login-register {
+    display: flex;
+    justify-content: space-between;
+}
 /* Стили для кнопки отправки */
-button.submit {
+.submit {
     background-color: #555555cc;
     color: white;
     font-size: 16px;
@@ -405,8 +416,13 @@ button.submit {
     transition: background-color 0.6s ease, color 0.6s ease;
 }
 
-button.submit:hover {
+.submit:hover {
     background-color: #222;
+}
+
+.submit-register {
+    text-decoration: none;
+    background-color: #0059b2;
 }
 
 /* Стили для ошибок */

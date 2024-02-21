@@ -1,8 +1,7 @@
 from django.conf import settings
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponse, HttpRequest
-from django.shortcuts import render, redirect, get_object_or_404
-from django.urls import reverse_lazy
+from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView, CreateView, UpdateView
 
 from .forms import PostForm
@@ -81,6 +80,19 @@ class CatsTagList(DataMixin, ListView):
         context = super().get_context_data(**kwargs)
         tags = TagPosts.objects.get(slug=self.kwargs['tag_slug'])
         return self.get_mixin_context(context, title='Тег - ' + tags.tag)
+
+
+class UserPosts(DataMixin, ListView):
+    template_name = 'funnytail/index.html'
+    context_object_name = 'posts'
+    allow_empty = False
+
+    def get_queryset(self):
+        return Cats.objects.filter(author__username=self.kwargs['user_name']).select_related('breed', 'author')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return self.get_mixin_context(context, title=f"Статьи пользователя: {self.kwargs['user_name']}")
 
 
 def contact(request: HttpRequest) -> HttpResponse:

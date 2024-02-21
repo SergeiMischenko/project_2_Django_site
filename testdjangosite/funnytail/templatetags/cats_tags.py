@@ -8,7 +8,7 @@ register = template.Library()
 
 
 @register.inclusion_tag('funnytail/list_categories.html')
-def show_categories(category_selected=0):
+def show_categories(category_selected):
     categories = Breed.objects.filter(posts__gte=1).distinct()
     return {'categories': categories, 'category_selected': category_selected}
 
