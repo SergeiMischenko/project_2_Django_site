@@ -111,6 +111,6 @@ def about(request: HttpRequest):
     return render(request, "funnytail/about.html", context=data)
 
 
-def page_not_found(request: HttpRequest):
+def page_not_found(request: HttpRequest, exception: Exception):
     data = {"title": "Ошибка 404, страница не найдена", "body": "Страница не найдена"}
     return render(request, "funnytail/error404.html", context=data)
