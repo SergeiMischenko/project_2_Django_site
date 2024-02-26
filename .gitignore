@@ -157,3 +157,5 @@ GitHub.sublime-settings
 /.idea/.gitignore
 /testdjangosite/static/funnytail/css/styles-копия.css
 /testdjangosite/templates/base — копия.html
+/.pylintrc
+/.idea
