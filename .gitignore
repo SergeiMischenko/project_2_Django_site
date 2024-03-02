@@ -4,7 +4,7 @@
 *.pyc
 __pycache__
 db.sqlite3
-media
+testdjangosite/media
 
 # Backup files # 
 *.bak 
@@ -155,7 +155,5 @@ GitHub.sublime-settings
 /.idea/project_2_Django_site.iml
 /.idea/vcs.xml
 /.idea/.gitignore
-/testdjangosite/static/funnytail/css/styles-копия.css
-/testdjangosite/templates/base — копия.html
 /.pylintrc
 /.idea
