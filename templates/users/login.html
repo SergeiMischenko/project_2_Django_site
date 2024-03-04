@@ -10,11 +10,24 @@
 			<p><label for="{{ f.id_for_label }}" class="form-label">{{ f.label }}</label>{{ f }}</p>
 			<div class="form-error">{{ f.errors }}</div>
 		{% endfor %}
-		<p class="buttons-login-register">
+		<div class="buttons-login-register">
 			<button class="submit" type="submit">Войти</button>
-			<a class="submit submit-register" href="{% url 'users:register' %}">Регистрация</a>
-		</p>
+			<div class="social-auth-url">
+				<a href="{% url 'social:begin' 'github' %}">
+					<img src="/media/social-auth/github.png">
+				</a>
+				<a href="{% url 'social:begin' 'google-oauth2' %}">
+					<img src="/media/social-auth/google.png">
+				</a>
+				<a href="{% url 'social:begin' 'vk-oauth2' %}">
+					<img src="/media/social-auth/vk.png">
+				</a>
+			</div>
+		</div>
 		<hr>
-		<p class="forgot-password"><a href="{% url 'users:password_reset' %}">Забыли пароль?</a></p>
+		<div class="forgot-and-register">
+			<p class="forgot-password"><a href="{% url 'users:password_reset' %}">Забыли пароль?</a></p>
+			<a class="submit submit-register" href="{% url 'users:register' %}">Регистрация</a>
+		</div>
 	</form>
 {% endblock %}

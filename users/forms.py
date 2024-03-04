@@ -52,7 +52,7 @@ class RegisterUserForm(UserCreationForm):
 
 class ProfileUserForm(forms.ModelForm):
     username = forms.CharField(disabled=True, label="Логин")
-    email = forms.CharField(disabled=True, label="E-Mail")
+    email = forms.CharField(disabled=True, required=False, label="E-Mail")
     this_year = date.today().year
     date_birth = forms.DateField(
         widget=forms.SelectDateWidget(

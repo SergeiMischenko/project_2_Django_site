@@ -351,6 +351,7 @@ div.text-content {
     border-radius: 8px;
     transition: background-color 0.6s ease, color 0.6s ease;
 }
+
 .user-posts a {
     display: flex;
     justify-content: center;
@@ -368,6 +369,24 @@ div.text-content {
     text-decoration: none;
     font-weight: bold;
     color: #0059b2;
+}
+
+.forgot-and-register{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-auth-url {
+    width: 145px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social-auth-url a img {
+    width: 30px;
+    height: 30px;
 }
 
 input[type="text"],
@@ -402,7 +421,9 @@ textarea {
 .buttons-login-register {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 15px;
 }
+
 /* Стили для кнопки отправки */
 .submit {
     background-color: #555555cc;

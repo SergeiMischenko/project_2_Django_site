@@ -18,7 +18,9 @@
 		<p>
 			<button class="submit" type="submit">Изменить</button>
 		</p>
-		<hr>
-		<p class="change-password"><a href="{% url 'users:password_change' %}">Изменить пароль</a></p>
+		{% if not perms.users.social_auth or user.is_superuser %}
+			<hr>
+			<p class="change-password"><a href="{% url 'users:password_change' %}">Изменить пароль</a></p>
+		{% endif %}
 	</form>
 {% endblock %}
