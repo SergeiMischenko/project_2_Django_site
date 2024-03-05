@@ -37,21 +37,21 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-
     "debug_toolbar",
     "social_django",
     "django_extensions",
     "captcha",
-
     "funnytail.apps.FunnytailConfig",
     "users.apps.UsersConfig",
 ]
 
 MIDDLEWARE = [
-    "django.middleware.security.SecurityMiddleware",
     "debug_toolbar.middleware.DebugToolbarMiddleware",
+    "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.cache.UpdateCacheMiddleware",
     "django.middleware.common.CommonMiddleware",
+    "django.middleware.cache.FetchFromCacheMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
@@ -97,6 +97,18 @@ DATABASES = {
     #     "ENGINE": "django.db.backends.sqlite3",
     #     "NAME": BASE_DIR / "db.sqlite3",
     # }
+}
+
+CACHE_MIDDLEWARE_ALIAS = "default"
+CACHE_MIDDLEWARE_SECONDS = 120
+CACHE_MIDDLEWARE_KEY_PREFIX = "testdjangosite"
+
+CACHES = {
+    "default": {
+        # "BACKEND": "django.core.cache.backends.dummy.DummyCache",  # Заглушка кеша
+        "BACKEND": "django.core.cache.backends.redis.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379",
+    }
 }
 
 # Password validation
@@ -153,7 +165,6 @@ AUTHENTICATION_BACKENDS = [
     "social_core.backends.github.GithubOAuth2",
     "social_core.backends.vk.VKOAuth2",
     "social_core.backends.google.GoogleOAuth2",
-
     "django.contrib.auth.backends.ModelBackend",
     "users.authentication.EmailAuthBackend",
 ]
@@ -164,27 +175,29 @@ DEFAULT_USER_IMAGE = MEDIA_URL + "users/default.png"
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 SOCIAL_AUTH_PIPELINE = (
-    'social_core.pipeline.social_auth.social_details',
-    'social_core.pipeline.social_auth.social_uid',
-    'social_core.pipeline.social_auth.social_user',
-    'social_core.pipeline.user.get_username',
-    'social_core.pipeline.social_auth.associate_by_email',
-    'social_core.pipeline.user.create_user',
-    'users.pipeline.new_users_handler',
-    'social_core.pipeline.social_auth.associate_user',
-    'social_core.pipeline.social_auth.load_extra_data',
-    'social_core.pipeline.user.user_details',
+    "social_core.pipeline.social_auth.social_details",
+    "social_core.pipeline.social_auth.social_uid",
+    "social_core.pipeline.social_auth.social_user",
+    "social_core.pipeline.user.get_username",
+    "social_core.pipeline.social_auth.associate_by_email",
+    "social_core.pipeline.user.create_user",
+    "users.pipeline.new_users_handler",
+    "social_core.pipeline.social_auth.associate_user",
+    "social_core.pipeline.social_auth.load_extra_data",
+    "social_core.pipeline.user.user_details",
 )
 
-SOCIAL_AUTH_GITHUB_KEY = 'ed8a5ecd8febdaa9b7bf'
-SOCIAL_AUTH_GITHUB_SECRET = 'b89b32d70d7a562c63c2202424ea6977510a5e3c'
+SOCIAL_AUTH_GITHUB_KEY = "ed8a5ecd8febdaa9b7bf"
+SOCIAL_AUTH_GITHUB_SECRET = "b89b32d70d7a562c63c2202424ea6977510a5e3c"
 
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '979810894575-44bbb0j6lqfjfnnqf3deo2eomjlm32e0.apps.googleusercontent.com'
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = (
+    "979810894575-44bbb0j6lqfjfnnqf3deo2eomjlm32e0.apps.googleusercontent.com"
+)
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = "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"
 
-SOCIAL_AUTH_VK_OAUTH2_KEY = '51868782'
-SOCIAL_AUTH_VK_OAUTH2_SECRET = 'AcnpJI3PLWOG1AkXL0B9'
-SOCIAL_AUTH_VK_OAUTH2_SCOPE = ['email']
+SOCIAL_AUTH_VK_OAUTH2_KEY = "51868782"
+SOCIAL_AUTH_VK_OAUTH2_SECRET = "AcnpJI3PLWOG1AkXL0B9"
+SOCIAL_AUTH_VK_OAUTH2_SCOPE = ["email"]
 
 # Капча
 CAPTCHA_IMAGE_SIZE = (150, 50)

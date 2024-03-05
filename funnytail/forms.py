@@ -14,7 +14,10 @@ class PostForm(forms.ModelForm):
         required=False,
         label="Теги",
     )
-    captcha = CaptchaField(label="Что на картинке", error_messages={"invalid": "Неправильная каптча"})
+    captcha = CaptchaField(
+        label="Что на картинке", error_messages={"invalid": "Неправильная каптча"}
+    )
+
     class Meta:
         model = Cats
         fields = [
@@ -33,4 +36,6 @@ class ContactForm(forms.Form):
     name = forms.CharField(label="Имя", max_length=255)
     email = forms.EmailField(label="Email")
     message = forms.CharField(widget=forms.Textarea, label="Сообщение")
-    captcha = CaptchaField(label="Что на картинке", error_messages={"invalid": "Неправильная каптча"})
+    captcha = CaptchaField(
+        label="Что на картинке", error_messages={"invalid": "Неправильная каптча"}
+    )

@@ -3,9 +3,9 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse_lazy
-from django.views.generic import CreateView, DetailView, ListView, UpdateView, FormView
+from django.views.generic import CreateView, DetailView, FormView, ListView, UpdateView
 
-from .forms import PostForm, ContactForm
+from .forms import ContactForm, PostForm
 from .models import Cats, TagPosts
 from .utils import DataMixin
 
@@ -104,9 +104,9 @@ class UserPosts(DataMixin, ListView):
 
 class ContactFormView(LoginRequiredMixin, DataMixin, FormView):
     form_class = ContactForm
-    template_name = 'funnytail/contact.html'
-    success_url = reverse_lazy('home')
-    title_page = 'Обратная связь'
+    template_name = "funnytail/contact.html"
+    success_url = reverse_lazy("home")
+    title_page = "Обратная связь"
 
     def form_valid(self, form):
         print(form.cleaned_data)
