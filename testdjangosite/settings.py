@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django.contrib.sites",
+    "django.contrib.sitemaps",
     "debug_toolbar",
     "social_django",
     "django_extensions",
@@ -203,3 +205,5 @@ SOCIAL_AUTH_VK_OAUTH2_SCOPE = ["email"]
 CAPTCHA_IMAGE_SIZE = (150, 50)
 CAPTCHA_LENGTH = 4
 CAPTCHA_FONT_SIZE = 30
+
+SITE_ID = 1
