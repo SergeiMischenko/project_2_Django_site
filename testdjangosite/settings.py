@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "debug_toolbar",
     "social_django",
     "django_extensions",
+    "captcha",
 
     "funnytail.apps.FunnytailConfig",
     "users.apps.UsersConfig",
@@ -85,9 +86,17 @@ WSGI_APPLICATION = "testdjangosite.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "funnytail_db",
+        "USER": "funnytail",
+        "PASSWORD": "0103",
+        "HOST": "localhost",
+        "PORT": "5432",
     }
+    # "default": {
+    #     "ENGINE": "django.db.backends.sqlite3",
+    #     "NAME": BASE_DIR / "db.sqlite3",
+    # }
 }
 
 # Password validation
@@ -177,3 +186,7 @@ SOCIAL_AUTH_VK_OAUTH2_KEY = '51868782'
 SOCIAL_AUTH_VK_OAUTH2_SECRET = 'AcnpJI3PLWOG1AkXL0B9'
 SOCIAL_AUTH_VK_OAUTH2_SCOPE = ['email']
 
+# Капча
+CAPTCHA_IMAGE_SIZE = (150, 50)
+CAPTCHA_LENGTH = 4
+CAPTCHA_FONT_SIZE = 30

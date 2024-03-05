@@ -280,6 +280,7 @@ div.text-content {
 
 /* Стили для форм */
 .form-addpage,
+.form-contact,
 .form-login,
 .form-register,
 .form-profile,
@@ -294,9 +295,10 @@ div.text-content {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.form-password-reset, .form-password-reset-confirm {
+.form-addpage, .form-contact, .form-password-reset, .form-password-reset-confirm {
     max-width: 430px;
 }
+
 
 /* Стили для кнопок в формах форм */
 .form-logout > button.logout {
@@ -334,6 +336,11 @@ div.text-content {
     min-width: 160px;
 }
 
+.captcha{
+    display: flex;
+    margin-bottom: 10px;
+
+}
 .form-password-reset p, .form-password-reset-confirm p {
     display: flex;
     justify-content: space-between;
@@ -401,6 +408,7 @@ textarea {
     border: 2px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
+    resize: vertical;
 }
 
 div #id_tags {

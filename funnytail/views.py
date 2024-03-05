@@ -2,9 +2,10 @@ from django.conf import settings
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import get_object_or_404, render
-from django.views.generic import CreateView, DetailView, ListView, UpdateView
+from django.urls import reverse_lazy
+from django.views.generic import CreateView, DetailView, ListView, UpdateView, FormView
 
-from .forms import PostForm
+from .forms import PostForm, ContactForm
 from .models import Cats, TagPosts
 from .utils import DataMixin
 
@@ -101,9 +102,15 @@ class UserPosts(DataMixin, ListView):
         )
 
 
-def contact(request: HttpRequest) -> HttpResponse:
-    data = {"title": "Обратная связь", "default_image": settings.DEFAULT_USER_IMAGE}
-    return render(request, "funnytail/contact.html", context=data)
+class ContactFormView(LoginRequiredMixin, DataMixin, FormView):
+    form_class = ContactForm
+    template_name = 'funnytail/contact.html'
+    success_url = reverse_lazy('home')
+    title_page = 'Обратная связь'
+
+    def form_valid(self, form):
+        print(form.cleaned_data)
+        return super().form_valid(form)
 
 
 def about(request: HttpRequest):

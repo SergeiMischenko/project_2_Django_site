@@ -1,5 +1,6 @@
 from datetime import date
 
+from captcha.fields import CaptchaField
 from django import forms
 from django.contrib.auth import get_user_model
 from django.contrib.auth.forms import (AuthenticationForm, PasswordChangeForm,
@@ -24,6 +25,7 @@ class RegisterUserForm(UserCreationForm):
         ),
         label="День Рождения",
     )
+    captcha = CaptchaField(label="Что на картинке", error_messages={"invalid": "Неправильная каптча"})
 
     class Meta:
         model = get_user_model()
