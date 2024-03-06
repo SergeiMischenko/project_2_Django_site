@@ -3,7 +3,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse_lazy
-from django.views.generic import CreateView, DetailView, FormView, ListView, UpdateView
+from django.views.generic import (CreateView, DetailView, FormView, ListView,
+                                  UpdateView)
 
 from .forms import ContactForm, PostForm
 from .models import Cats, TagPosts

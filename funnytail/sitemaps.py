@@ -1,6 +1,6 @@
 from django.contrib.sitemaps import Sitemap
 
-from funnytail.models import Cats, Breed, TagPosts
+from funnytail.models import Breed, Cats, TagPosts
 
 
 class PostSitemap(Sitemap):

@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
+import sys
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -107,9 +108,9 @@ CACHE_MIDDLEWARE_KEY_PREFIX = "testdjangosite"
 
 CACHES = {
     "default": {
-        # "BACKEND": "django.core.cache.backends.dummy.DummyCache",  # Заглушка кеша
-        "BACKEND": "django.core.cache.backends.redis.RedisCache",
-        "LOCATION": "redis://127.0.0.1:6379",
+        "BACKEND": "django.core.cache.backends.dummy.DummyCache",  # Заглушка кеша
+        # "BACKEND": "django.core.cache.backends.redis.RedisCache",
+        # "LOCATION": "redis://127.0.0.1:6379",
     }
 }
 
