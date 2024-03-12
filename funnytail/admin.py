@@ -1,7 +1,7 @@
 from django.contrib import admin, messages
 from django.utils.safestring import mark_safe
 
-from funnytail.models import Breed, Cats, TagPosts, Comment
+from funnytail.models import Breed, Cats, Comment, TagPosts
 
 
 @admin.register(Cats)

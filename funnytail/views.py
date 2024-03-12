@@ -1,13 +1,15 @@
 from django.conf import settings
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.contrib.postgres.search import SearchVector, SearchQuery, SearchRank
+from django.contrib.postgres.search import (SearchQuery, SearchRank,
+                                            SearchVector)
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse_lazy
 from django.views.decorators.http import require_POST
-from django.views.generic import CreateView, DetailView, FormView, ListView, UpdateView
+from django.views.generic import (CreateView, DetailView, FormView, ListView,
+                                  UpdateView)
 
-from .forms import ContactForm, PostForm, SearchForm, CommentForm
+from .forms import CommentForm, ContactForm, PostForm, SearchForm
 from .models import Cats, TagPosts
 from .utils import DataMixin
 

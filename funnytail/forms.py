@@ -1,7 +1,7 @@
 from captcha.fields import CaptchaField
 from django import forms
 
-from .models import Breed, Cats, TagPosts, Comment
+from .models import Breed, Cats, Comment, TagPosts
 
 
 class PostForm(forms.ModelForm):

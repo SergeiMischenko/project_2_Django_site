@@ -2,7 +2,7 @@ from django import template
 from django.db.models import Count
 
 import funnytail.views as views
-from funnytail.models import Breed, TagPosts, Cats
+from funnytail.models import Breed, Cats, TagPosts
 
 register = template.Library()
 
