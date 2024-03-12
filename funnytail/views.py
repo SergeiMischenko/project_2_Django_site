@@ -5,8 +5,7 @@ from django.http import HttpRequest, HttpResponse
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse_lazy
 from django.views.decorators.http import require_POST
-from django.views.generic import (CreateView, DetailView, FormView, ListView,
-                                  UpdateView)
+from django.views.generic import CreateView, DetailView, FormView, ListView, UpdateView
 
 from .forms import ContactForm, PostForm, SearchForm, CommentForm
 from .models import Cats, TagPosts
@@ -155,7 +154,13 @@ def post_search(request):
     return render(
         request,
         "funnytail/search.html",
-        {"title": "Поиск", "form": form, "query": query, "results": results, "default_image": settings.DEFAULT_USER_IMAGE},
+        {
+            "title": "Поиск",
+            "form": form,
+            "query": query,
+            "results": results,
+            "default_image": settings.DEFAULT_USER_IMAGE,
+        },
     )
 
 

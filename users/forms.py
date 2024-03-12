@@ -3,8 +3,11 @@ from datetime import date
 from captcha.fields import CaptchaField
 from django import forms
 from django.contrib.auth import get_user_model
-from django.contrib.auth.forms import (AuthenticationForm, PasswordChangeForm,
-                                       UserCreationForm)
+from django.contrib.auth.forms import (
+    AuthenticationForm,
+    PasswordChangeForm,
+    UserCreationForm,
+)
 
 
 class LoginUserForm(AuthenticationForm):
