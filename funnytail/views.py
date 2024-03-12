@@ -1,12 +1,14 @@
 from django.conf import settings
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.postgres.search import SearchVector, SearchQuery, SearchRank
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse_lazy
+from django.views.decorators.http import require_POST
 from django.views.generic import (CreateView, DetailView, FormView, ListView,
                                   UpdateView)
 
-from .forms import ContactForm, PostForm
+from .forms import ContactForm, PostForm, SearchForm, CommentForm
 from .models import Cats, TagPosts
 from .utils import DataMixin
 
@@ -112,6 +114,49 @@ class ContactFormView(LoginRequiredMixin, DataMixin, FormView):
     def form_valid(self, form):
         print(form.cleaned_data)
         return super().form_valid(form)
+
+
+@require_POST
+def post_comment(request, post_id):
+    post = get_object_or_404(Cats, id=post_id, is_published=Cats.Status.PUBLISHED)
+    title = "Добавить новый комментарий"
+    comment = None
+    form = CommentForm(data=request.POST)
+    if form.is_valid():
+        comment = form.save(commit=False)
+        comment.post = post
+        comment.save()
+    return render(
+        request,
+        "funnytail/comment.html",
+        {"post": post, "title": title, "form": form, "comment": comment},
+    )
+
+
+def post_search(request):
+    form = SearchForm()
+    query = None
+    results = []
+    if "query" in request.GET:
+        form = SearchForm(request.GET)
+        if form.is_valid():
+            query = form.cleaned_data["query"]
+            search_vector = SearchVector(
+                "title", weight="A", config="russian"
+            ) + SearchVector("content", weight="B", config="russian")
+            search_query = SearchQuery(query, config="russian")
+            results = (
+                Cats.published.annotate(
+                    search=search_vector, rank=SearchRank(search_vector, search_query)
+                )
+                .filter(rank__gte=0.3)
+                .order_by("-rank")
+            )
+    return render(
+        request,
+        "funnytail/search.html",
+        {"title": "Поиск", "form": form, "query": query, "results": results, "default_image": settings.DEFAULT_USER_IMAGE},
+    )
 
 
 def about(request: HttpRequest):

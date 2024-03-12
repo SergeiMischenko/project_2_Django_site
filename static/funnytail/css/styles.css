@@ -286,7 +286,8 @@ div.text-content {
 .form-profile,
 .form-password-change,
 .form-password-reset,
-.form-password-reset-confirm {
+.form-password-reset-confirm,
+.form-post_comment {
     max-width: 360px;
     margin: 0 auto;
     padding: 5px 20px 5px 20px;
@@ -502,6 +503,20 @@ textarea {
     border: 2px solid #777;
     background-color: #999; /* Цвет фона выбранной страницы */
     color: #fff; /* Цвет текста выбранной страницы */
+}
+
+/* comments */
+.comment {
+    padding:5px;
+}
+.comment:nth-child(even) {
+    border-radius: 10px;
+    background:#ccc;
+}
+.comment .info {
+    font-weight:bold;
+    font-size:16px;
+    color:#666;
 }
 
 /* Стиль для подвала */

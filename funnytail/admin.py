@@ -1,7 +1,7 @@
 from django.contrib import admin, messages
 from django.utils.safestring import mark_safe
 
-from funnytail.models import Breed, Cats, TagPosts
+from funnytail.models import Breed, Cats, TagPosts, Comment
 
 
 @admin.register(Cats)
@@ -63,3 +63,10 @@ class TagsAdmin(admin.ModelAdmin):
     list_display_links = ("id", "tag")
     prepopulated_fields = {"slug": ("tag",)}
     ordering = ["tag", "id"]
+
+
+@admin.register(Comment)
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ["name", "email", "post", "created", "active"]
+    list_filter = ["active", "created", "updated"]
+    search_fields = ["name", "email", "body"]

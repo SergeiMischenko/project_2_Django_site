@@ -2,6 +2,7 @@ from django.conf import settings
 
 menu = [
     {"title": "О сайте", "url_name": "about"},
+    {"title": "Поиск", "url_name": "post_search"},
     {"title": "Добавить статью", "url_name": "add_page"},
     {"title": "Обратная связь", "url_name": "contact"},
 ]

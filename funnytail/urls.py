@@ -16,4 +16,6 @@ urlpatterns = [
     ),
     path("tag/<slug:tag_slug>/", views.CatsTagList.as_view(), name="tag"),
     path("edit/<slug:slug>/", views.UpdatePage.as_view(), name="edit_page"),
+    path("<int:post_id>/comment/", views.post_comment, name="post_comment"),
+    path("search/", views.post_search, name="post_search"),
 ]

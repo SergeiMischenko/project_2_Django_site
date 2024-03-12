@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load cats_tags %}
+{% block title %}Поиск{% endblock %}
+{% block content %}
+	{% if query %}
+		<h1>Поиск постов по "{{ query }}"</h1>
+		<h3>
+			{% with results.count as total_results %}
+				Найдено результатов: {{ total_results }}
+			{% endwith %}
+		</h3>
+		{% for post in results %}
+			<h4>
+				<a href="{{ post.get_absolute_url }}">
+					{{ post.title }}
+				</a>
+			</h4>
+			{{ post.content|linebreaks|truncatewords:40 }}
+			{% empty %}
+			<p>Нет результатов.</p>
+		{% endfor %}
+		<p><a href="{% url "post_search" %}">Искать ещё</a></p>
+	{% else %}
+		<h1>Поиск</h1>
+		<form method="get">
+			{{ form.as_p }}
+			<input type="submit" value="Поиск">
+		</form>
+	{% endif %}
+{% endblock %}

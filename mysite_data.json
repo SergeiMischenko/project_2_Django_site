@@ -1,0 +1,2076 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2024-03-12T08:47:05.834Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "localhost:800",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Domain name\", \"Display name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2024-03-12T08:47:41.077Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "1",
+    "object_repr": "Мейн-кун",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2024-03-12T08:47:47.921Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "2",
+    "object_repr": "Сиамская",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2024-03-12T08:47:52.087Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "3",
+    "object_repr": "Персидская",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2024-03-12T08:47:55.978Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "4",
+    "object_repr": "Британская",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2024-03-12T08:47:59.710Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "5",
+    "object_repr": "Абиссинская",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2024-03-12T08:48:03.455Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "6",
+    "object_repr": "Бенгальская",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2024-03-12T08:48:07.589Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "7",
+    "object_repr": "Сфинкс",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2024-03-12T08:48:12.498Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "8",
+    "object_repr": "Русская голубая",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2024-03-12T08:48:16.137Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "9",
+    "object_repr": "Рэгдолл",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2024-03-12T08:48:21.399Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "10",
+    "object_repr": "Шотландская вислоухая",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2024-03-12T08:48:24.993Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "11",
+    "object_repr": "Сибирская",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2024-03-12T08:48:30.257Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "12",
+    "object_repr": "Норвежская лесная",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2024-03-12T08:48:35.357Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "13",
+    "object_repr": "Турецкая ангора",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2024-03-12T08:48:38.990Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "14",
+    "object_repr": "Манчкин",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2024-03-12T08:48:43.002Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "15",
+    "object_repr": "Беспородная",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2024-03-12T08:48:51.567Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "16",
+    "object_repr": "Другая",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2024-03-12T08:49:07.207Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "5",
+    "object_repr": "Абиссинская",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2024-03-12T08:49:07.214Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "6",
+    "object_repr": "Бенгальская",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2024-03-12T08:49:07.216Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "15",
+    "object_repr": "Беспородная",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2024-03-12T08:49:07.219Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "4",
+    "object_repr": "Британская",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2024-03-12T08:49:07.221Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "16",
+    "object_repr": "Другая",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2024-03-12T08:49:07.223Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "14",
+    "object_repr": "Манчкин",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2024-03-12T08:49:07.225Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "1",
+    "object_repr": "Мейн-кун",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2024-03-12T08:49:07.227Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "12",
+    "object_repr": "Норвежская лесная",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2024-03-12T08:49:07.228Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "3",
+    "object_repr": "Персидская",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2024-03-12T08:49:07.230Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "8",
+    "object_repr": "Русская голубая",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2024-03-12T08:49:07.231Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "9",
+    "object_repr": "Рэгдолл",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2024-03-12T08:49:07.233Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "2",
+    "object_repr": "Сиамская",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2024-03-12T08:49:07.234Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "11",
+    "object_repr": "Сибирская",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2024-03-12T08:49:07.236Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "7",
+    "object_repr": "Сфинкс",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2024-03-12T08:49:07.238Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "13",
+    "object_repr": "Турецкая ангора",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2024-03-12T08:49:07.240Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "10",
+    "object_repr": "Шотландская вислоухая",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2024-03-12T08:49:19.156Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "1",
+    "object_repr": "Беспородная",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2024-03-12T08:49:23.963Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "2",
+    "object_repr": "Другая",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2024-03-12T08:49:28.426Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "3",
+    "object_repr": "Манчкин",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2024-03-12T08:49:33.032Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "4",
+    "object_repr": "Турецкая ангора",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2024-03-12T08:49:37.350Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "5",
+    "object_repr": "Норвежская лесная",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2024-03-12T08:49:40.784Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "6",
+    "object_repr": "Сибирская",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2024-03-12T08:49:45.264Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "7",
+    "object_repr": "Шотландская вислоухая",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2024-03-12T08:49:48.577Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "8",
+    "object_repr": "Рэгдолл",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2024-03-12T08:49:52.794Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "9",
+    "object_repr": "Русская голубая",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2024-03-12T08:49:56.455Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "10",
+    "object_repr": "Сфинкс",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2024-03-12T08:50:00.045Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "11",
+    "object_repr": "Бенгальская",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2024-03-12T08:50:03.565Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "12",
+    "object_repr": "Абиссинская",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2024-03-12T08:50:07.024Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "13",
+    "object_repr": "Британская",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2024-03-12T08:50:10.343Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "14",
+    "object_repr": "Персидская",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2024-03-12T08:50:13.899Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "15",
+    "object_repr": "Сиамская",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2024-03-12T08:50:18.463Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "16",
+    "object_repr": "Мейн-кун",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2024-03-12T08:50:31.726Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "17",
+    "object_repr": "Спокойные",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2024-03-12T08:50:35.450Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "18",
+    "object_repr": "Активные",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2024-03-12T08:50:38.830Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "19",
+    "object_repr": "Веселые",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2024-03-12T08:50:42.365Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "20",
+    "object_repr": "Игривые",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2024-03-12T08:50:45.567Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "21",
+    "object_repr": "Ласковые",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2024-03-12T08:50:49.051Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "22",
+    "object_repr": "Жизнерадостные",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2024-03-12T08:50:52.438Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "23",
+    "object_repr": "Ленивые",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2024-03-12T08:50:56.307Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "24",
+    "object_repr": "Умные",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2024-03-12T08:51:00.253Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "25",
+    "object_repr": "Глупые",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2024-03-12T08:51:03.743Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "26",
+    "object_repr": "Смелые",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2024-03-12T08:51:07.494Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "27",
+    "object_repr": "Пугливые",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2024-03-12T08:51:11.817Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "28",
+    "object_repr": "Беспокойные",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 62,
+  "fields": {
+    "action_time": "2024-03-12T08:51:16.217Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "29",
+    "object_repr": "Любопытные",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 63,
+  "fields": {
+    "action_time": "2024-03-12T08:51:20.559Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "30",
+    "object_repr": "Агрессивные",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 64,
+  "fields": {
+    "action_time": "2024-03-12T08:51:26.047Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "31",
+    "object_repr": "Послушные",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 65,
+  "fields": {
+    "action_time": "2024-03-12T08:51:29.497Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "32",
+    "object_repr": "Заботливые",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 66,
+  "fields": {
+    "action_time": "2024-03-12T08:51:34.054Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "33",
+    "object_repr": "Дружелюбные",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 67,
+  "fields": {
+    "action_time": "2024-03-12T08:51:37.830Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "34",
+    "object_repr": "Упрямые",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 68,
+  "fields": {
+    "action_time": "2024-03-12T09:03:38.026Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "1",
+    "object_repr": "Social",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 4,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 4,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 4,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 4,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 5,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 5,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 5,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 5,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add site",
+    "content_type": 6,
+    "codename": "add_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change site",
+    "content_type": 6,
+    "codename": "change_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete site",
+    "content_type": 6,
+    "codename": "delete_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view site",
+    "content_type": 6,
+    "codename": "view_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add association",
+    "content_type": 7,
+    "codename": "add_association"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change association",
+    "content_type": 7,
+    "codename": "change_association"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete association",
+    "content_type": 7,
+    "codename": "delete_association"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view association",
+    "content_type": 7,
+    "codename": "view_association"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add code",
+    "content_type": 8,
+    "codename": "add_code"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change code",
+    "content_type": 8,
+    "codename": "change_code"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete code",
+    "content_type": 8,
+    "codename": "delete_code"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view code",
+    "content_type": 8,
+    "codename": "view_code"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add nonce",
+    "content_type": 9,
+    "codename": "add_nonce"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change nonce",
+    "content_type": 9,
+    "codename": "change_nonce"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete nonce",
+    "content_type": 9,
+    "codename": "delete_nonce"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view nonce",
+    "content_type": 9,
+    "codename": "view_nonce"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add user social auth",
+    "content_type": 10,
+    "codename": "add_usersocialauth"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change user social auth",
+    "content_type": 10,
+    "codename": "change_usersocialauth"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete user social auth",
+    "content_type": 10,
+    "codename": "delete_usersocialauth"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view user social auth",
+    "content_type": 10,
+    "codename": "view_usersocialauth"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add partial",
+    "content_type": 11,
+    "codename": "add_partial"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change partial",
+    "content_type": 11,
+    "codename": "change_partial"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete partial",
+    "content_type": 11,
+    "codename": "delete_partial"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view partial",
+    "content_type": 11,
+    "codename": "view_partial"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 45,
+  "fields": {
+    "name": "Can add captcha store",
+    "content_type": 12,
+    "codename": "add_captchastore"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 46,
+  "fields": {
+    "name": "Can change captcha store",
+    "content_type": 12,
+    "codename": "change_captchastore"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 47,
+  "fields": {
+    "name": "Can delete captcha store",
+    "content_type": 12,
+    "codename": "delete_captchastore"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 48,
+  "fields": {
+    "name": "Can view captcha store",
+    "content_type": 12,
+    "codename": "view_captchastore"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 49,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 13,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 50,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 13,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 51,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 13,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 52,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 13,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 53,
+  "fields": {
+    "name": "Can add Порода",
+    "content_type": 14,
+    "codename": "add_breed"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 54,
+  "fields": {
+    "name": "Can change Порода",
+    "content_type": 14,
+    "codename": "change_breed"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 55,
+  "fields": {
+    "name": "Can delete Порода",
+    "content_type": 14,
+    "codename": "delete_breed"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 56,
+  "fields": {
+    "name": "Can view Порода",
+    "content_type": 14,
+    "codename": "view_breed"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 57,
+  "fields": {
+    "name": "Can add Тег",
+    "content_type": 15,
+    "codename": "add_tagposts"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 58,
+  "fields": {
+    "name": "Can change Тег",
+    "content_type": 15,
+    "codename": "change_tagposts"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 59,
+  "fields": {
+    "name": "Can delete Тег",
+    "content_type": 15,
+    "codename": "delete_tagposts"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 60,
+  "fields": {
+    "name": "Can view Тег",
+    "content_type": 15,
+    "codename": "view_tagposts"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 61,
+  "fields": {
+    "name": "Can add Кошки",
+    "content_type": 16,
+    "codename": "add_cats"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 62,
+  "fields": {
+    "name": "Can change Кошки",
+    "content_type": 16,
+    "codename": "change_cats"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 63,
+  "fields": {
+    "name": "Can delete Кошки",
+    "content_type": 16,
+    "codename": "delete_cats"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 64,
+  "fields": {
+    "name": "Can view Кошки",
+    "content_type": 16,
+    "codename": "view_cats"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 65,
+  "fields": {
+    "name": "Can add comment",
+    "content_type": 17,
+    "codename": "add_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 66,
+  "fields": {
+    "name": "Can change comment",
+    "content_type": 17,
+    "codename": "change_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 67,
+  "fields": {
+    "name": "Can delete comment",
+    "content_type": 17,
+    "codename": "delete_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 68,
+  "fields": {
+    "name": "Can view comment",
+    "content_type": 17,
+    "codename": "view_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 69,
+  "fields": {
+    "name": "Social Auth",
+    "content_type": 13,
+    "codename": "social_auth"
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 1,
+  "fields": {
+    "name": "Social",
+    "permissions": [
+      69
+    ]
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "sites",
+    "model": "site"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "social_django",
+    "model": "association"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "social_django",
+    "model": "code"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "social_django",
+    "model": "nonce"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "social_django",
+    "model": "usersocialauth"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "social_django",
+    "model": "partial"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 12,
+  "fields": {
+    "app_label": "captcha",
+    "model": "captchastore"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 13,
+  "fields": {
+    "app_label": "users",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 14,
+  "fields": {
+    "app_label": "funnytail",
+    "model": "breed"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 15,
+  "fields": {
+    "app_label": "funnytail",
+    "model": "tagposts"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 16,
+  "fields": {
+    "app_label": "funnytail",
+    "model": "cats"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 17,
+  "fields": {
+    "app_label": "funnytail",
+    "model": "comment"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "wqbdj2rn2sja23p3qt9f3vjkbqqy5hk4",
+  "fields": {
+    "session_data": ".eJxVjDkOwjAUBe_iGlmOt2BK-pzB-ptJANlSlgpxd4iUAto3M--lMmzrmLdF5jyxuqhOnX43BHpI3QHfod6aplbXeUK9K_qgix4ay_N6uH8HIyzjt-5NkiimGCaw5MlhCFigZ8EYUDiebXIJiuuJoIiVjiimUFwXWLzx6v0BFYE5IQ:1rjy91:yTQPBhMkIPm6tTRg97S93cqkxb6XsKzhOl3D__WH1c8",
+    "expire_date": "2024-03-26T09:09:59.364Z"
+  }
+},
+{
+  "model": "sites.site",
+  "pk": 1,
+  "fields": {
+    "domain": "localhost:800",
+    "name": "localhost:800"
+  }
+},
+{
+  "model": "funnytail.cats",
+  "pk": 1,
+  "fields": {
+    "title": "Муся",
+    "slug": "musya",
+    "preview": "preview/lidka_user/musya.jpg",
+    "content": "Муся - это кошка с тихим и миролюбивым характером. В отличие от многих других кошек, она не проявляет особой страсти к играм и развлечениям. Вместо этого, она предпочитает тихие моменты уединения, когда может спокойно наблюдать за окружающим миром из своего любимого уголка.\r\n\r\nНесмотря на свою незаинтересованность в играх, Муся обладает невероятным спокойствием и нежностью. Она может проводить часы, просто находясь рядом со своими хозяевами, даря им свою спокойную энергию и умиротворение.\r\n\r\nМуся не нуждается в активных занятиях, чтобы быть счастливой. Ей достаточно просто быть рядом с теми, кого она любит, и она всегда готова поддержать своих хозяев своим мягким мурчанием и ласковым прикосновением. Ее нежная природа делает ее идеальным спутником для тех, кто ценит тихие и спокойные моменты в жизни.",
+    "time_create": "2024-03-12T09:07:29.703Z",
+    "time_update": "2024-03-12T09:07:29.703Z",
+    "is_published": true,
+    "breed": 1,
+    "author": 2,
+    "tags": [
+      33,
+      32,
+      21,
+      31,
+      26,
+      17,
+      24
+    ]
+  }
+},
+{
+  "model": "funnytail.cats",
+  "pk": 2,
+  "fields": {
+    "title": "Белка",
+    "slug": "belka",
+    "preview": "preview/lidka_user/belka.jpg",
+    "content": "Белка - это настоящий огонек в доме! Ее игривый и бесшабашный характер делает каждый день ярче и веселее. Она просто обожает беситься, будь то прыжки по всему дому или охотничьи игры с мячиками, игрушками или другими кошками.\r\n\r\nЭнергия Белки кажется неиссякаемой. Она всегда находится в движении, и каждый момент для нее - это возможность к новому приключению. Даже самые обыденные предметы могут стать для нее источником увлечения и веселья.\r\n\r\nНесмотря на ее бурную энергию, Белка обладает невероятным обаянием и дружелюбием. Она легко заводит друзей, как среди других животных, так и среди членов семьи. Ее игривость и радость жизни заразительны, и она всегда окружает себя веселой атмосферой.\r\n\r\nБелка - это истинный оптимист, который учит нас не принимать жизнь слишком серьезно и наслаждаться каждым мгновением. Ее присутствие наполняет дом радостью и весельем, делая ее не только любимицей семьи, но и душой компании.",
+    "time_create": "2024-03-12T09:08:46.190Z",
+    "time_update": "2024-03-12T09:08:46.190Z",
+    "is_published": true,
+    "breed": 1,
+    "author": 2,
+    "tags": [
+      18,
+      19,
+      22,
+      20,
+      23,
+      29,
+      27,
+      24
+    ]
+  }
+},
+{
+  "model": "funnytail.cats",
+  "pk": 3,
+  "fields": {
+    "title": "Мурзик",
+    "slug": "murzik",
+    "preview": "preview/lidka_user/murzik.jpg",
+    "content": "Мурзик - это истинный гигант с нежным сердцем. Его величественный вид и внушительные размеры могут пугать на первый взгляд, но стоит только приблизиться, как он раскрывает свою добрую и ласковую натуру. Мурзик не просто кот, он - компаньон, который готов поддержать в любой момент.\r\n\r\nВ его глазах можно увидеть мудрость и понимание, словно он знает все тайны этого мира. Он любопытен и исследовательски настроен, всегда готов исследовать новые уголки своего дома и окружения.\\r\\n\\r\\nМурзик обладает интеллектом и умением находить выход из любой ситуации. Он любит развивать свои навыки и обучаться новым трюкам, что делает его не только умным, но и увлекательным в компании.\r\n\r\nОднако, самое прекрасное в Мурзике - это его невероятная преданность и забота к своим хозяевам. Он всегда рядом, готов утешить своим мурлыканьем или просто быть рядом в трудные моменты. Мурзик - это настоящий друг и надежный союзник, который всегда будет рядом, чтобы поддержать и защитить своих близких.",
+    "time_create": "2024-03-12T09:09:51.124Z",
+    "time_update": "2024-03-12T09:09:51.124Z",
+    "is_published": true,
+    "breed": 16,
+    "author": 2,
+    "tags": [
+      33,
+      22,
+      21,
+      31,
+      26,
+      17,
+      24
+    ]
+  }
+},
+{
+  "model": "funnytail.cats",
+  "pk": 4,
+  "fields": {
+    "title": "Марсик",
+    "slug": "marsik",
+    "preview": "preview/root_user/marsik.jpg",
+    "content": "Марсик - это настоящий индивидуалист с яркой личностью. Он обладает невероятной харизмой и уверенностью, которые привлекают внимание сразу же. В его глазах читается невероятная умность и любопытство к миру вокруг.\r\n\r\nОн не просто кот, он личность с собственными увлечениями и интересами. Его любопытство никогда не иссякает, и он всегда готов к новым открытиям.\r\n\r\nНесмотря на свою индивидуальность, Марсик также обладает невероятной нежностью и преданностью к своим близким. Он может провести часы, просто лежа рядом со своими хозяевами и даря им свою любовь и тепло. Его присутствие наполняет дом уютом и гармонией.\r\n\r\nМарсик - это исключительный компаньон, который всегда поднимает настроение своими шалостями и забавами. Он любит играть и веселиться, будь то с игрушками или с другими членами семьи. Его присутствие делает каждый день интересным и непредсказуемым, и в его компании никогда не бывает скучно.",
+    "time_create": "2024-03-12T09:11:00.615Z",
+    "time_update": "2024-03-12T09:11:00.615Z",
+    "is_published": true,
+    "breed": 1,
+    "author": 1,
+    "tags": [
+      22,
+      32,
+      21,
+      17,
+      24
+    ]
+  }
+},
+{
+  "model": "funnytail.breed",
+  "pk": 1,
+  "fields": {
+    "name": "Беспородная",
+    "slug": "besporodnaya"
+  }
+},
+{
+  "model": "funnytail.breed",
+  "pk": 2,
+  "fields": {
+    "name": "Другая",
+    "slug": "drugaya"
+  }
+},
+{
+  "model": "funnytail.breed",
+  "pk": 3,
+  "fields": {
+    "name": "Манчкин",
+    "slug": "manchkin"
+  }
+},
+{
+  "model": "funnytail.breed",
+  "pk": 4,
+  "fields": {
+    "name": "Турецкая ангора",
+    "slug": "tureckaya-angora"
+  }
+},
+{
+  "model": "funnytail.breed",
+  "pk": 5,
+  "fields": {
+    "name": "Норвежская лесная",
+    "slug": "norvezhskaya-lesnaya"
+  }
+},
+{
+  "model": "funnytail.breed",
+  "pk": 6,
+  "fields": {
+    "name": "Сибирская",
+    "slug": "sibirskaya"
+  }
+},
+{
+  "model": "funnytail.breed",
+  "pk": 7,
+  "fields": {
+    "name": "Шотландская вислоухая",
+    "slug": "shotlandskaya-vislouhaya"
+  }
+},
+{
+  "model": "funnytail.breed",
+  "pk": 8,
+  "fields": {
+    "name": "Рэгдолл",
+    "slug": "regdoll"
+  }
+},
+{
+  "model": "funnytail.breed",
+  "pk": 9,
+  "fields": {
+    "name": "Русская голубая",
+    "slug": "russkaya-golubaya"
+  }
+},
+{
+  "model": "funnytail.breed",
+  "pk": 10,
+  "fields": {
+    "name": "Сфинкс",
+    "slug": "sfinks"
+  }
+},
+{
+  "model": "funnytail.breed",
+  "pk": 11,
+  "fields": {
+    "name": "Бенгальская",
+    "slug": "bengalskaya"
+  }
+},
+{
+  "model": "funnytail.breed",
+  "pk": 12,
+  "fields": {
+    "name": "Абиссинская",
+    "slug": "abissinskaya"
+  }
+},
+{
+  "model": "funnytail.breed",
+  "pk": 13,
+  "fields": {
+    "name": "Британская",
+    "slug": "britanskaya"
+  }
+},
+{
+  "model": "funnytail.breed",
+  "pk": 14,
+  "fields": {
+    "name": "Персидская",
+    "slug": "persidskaya"
+  }
+},
+{
+  "model": "funnytail.breed",
+  "pk": 15,
+  "fields": {
+    "name": "Сиамская",
+    "slug": "siamskaya"
+  }
+},
+{
+  "model": "funnytail.breed",
+  "pk": 16,
+  "fields": {
+    "name": "Мейн-кун",
+    "slug": "mejn-kun"
+  }
+},
+{
+  "model": "funnytail.tagposts",
+  "pk": 17,
+  "fields": {
+    "tag": "Спокойные",
+    "slug": "spokojnye"
+  }
+},
+{
+  "model": "funnytail.tagposts",
+  "pk": 18,
+  "fields": {
+    "tag": "Активные",
+    "slug": "aktivnye"
+  }
+},
+{
+  "model": "funnytail.tagposts",
+  "pk": 19,
+  "fields": {
+    "tag": "Веселые",
+    "slug": "veselye"
+  }
+},
+{
+  "model": "funnytail.tagposts",
+  "pk": 20,
+  "fields": {
+    "tag": "Игривые",
+    "slug": "igrivye"
+  }
+},
+{
+  "model": "funnytail.tagposts",
+  "pk": 21,
+  "fields": {
+    "tag": "Ласковые",
+    "slug": "laskovye"
+  }
+},
+{
+  "model": "funnytail.tagposts",
+  "pk": 22,
+  "fields": {
+    "tag": "Жизнерадостные",
+    "slug": "zhizneradostnye"
+  }
+},
+{
+  "model": "funnytail.tagposts",
+  "pk": 23,
+  "fields": {
+    "tag": "Ленивые",
+    "slug": "lenivye"
+  }
+},
+{
+  "model": "funnytail.tagposts",
+  "pk": 24,
+  "fields": {
+    "tag": "Умные",
+    "slug": "umnye"
+  }
+},
+{
+  "model": "funnytail.tagposts",
+  "pk": 25,
+  "fields": {
+    "tag": "Глупые",
+    "slug": "glupye"
+  }
+},
+{
+  "model": "funnytail.tagposts",
+  "pk": 26,
+  "fields": {
+    "tag": "Смелые",
+    "slug": "smelye"
+  }
+},
+{
+  "model": "funnytail.tagposts",
+  "pk": 27,
+  "fields": {
+    "tag": "Пугливые",
+    "slug": "puglivye"
+  }
+},
+{
+  "model": "funnytail.tagposts",
+  "pk": 28,
+  "fields": {
+    "tag": "Беспокойные",
+    "slug": "bespokojnye"
+  }
+},
+{
+  "model": "funnytail.tagposts",
+  "pk": 29,
+  "fields": {
+    "tag": "Любопытные",
+    "slug": "lyubopytnye"
+  }
+},
+{
+  "model": "funnytail.tagposts",
+  "pk": 30,
+  "fields": {
+    "tag": "Агрессивные",
+    "slug": "agressivnye"
+  }
+},
+{
+  "model": "funnytail.tagposts",
+  "pk": 31,
+  "fields": {
+    "tag": "Послушные",
+    "slug": "poslushnye"
+  }
+},
+{
+  "model": "funnytail.tagposts",
+  "pk": 32,
+  "fields": {
+    "tag": "Заботливые",
+    "slug": "zabotlivye"
+  }
+},
+{
+  "model": "funnytail.tagposts",
+  "pk": 33,
+  "fields": {
+    "tag": "Дружелюбные",
+    "slug": "druzhelyubnye"
+  }
+},
+{
+  "model": "funnytail.tagposts",
+  "pk": 34,
+  "fields": {
+    "tag": "Упрямые",
+    "slug": "upryamye"
+  }
+},
+{
+  "model": "users.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$WffRiyMgYrjetMNfJZkEvJ$KADH6is8aXMM79U3vmn7+cD+tL0zO++3cUkpnbadr+8=",
+    "last_login": "2024-03-12T09:09:59.360Z",
+    "is_superuser": true,
+    "username": "root",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2024-03-12T08:23:53.536Z",
+    "photo": "",
+    "date_birth": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$xknOGEMEH6AW0oaJQvKrPd$WnnA24V4a0G/i25V/1R+kqNhlAJol/SdPsW9QMKGTC8=",
+    "last_login": "2024-03-12T09:05:44.967Z",
+    "is_superuser": false,
+    "username": "lidka",
+    "first_name": "lidka",
+    "last_name": "lidkovna",
+    "email": "lidka@mail.ru",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-03-12T08:46:00.800Z",
+    "photo": "",
+    "date_birth": "2004-05-08T00:00:00Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]

@@ -1,7 +1,7 @@
 from captcha.fields import CaptchaField
 from django import forms
 
-from .models import Breed, Cats, TagPosts
+from .models import Breed, Cats, TagPosts, Comment
 
 
 class PostForm(forms.ModelForm):
@@ -39,3 +39,13 @@ class ContactForm(forms.Form):
     captcha = CaptchaField(
         label="Что на картинке", error_messages={"invalid": "Неправильная каптча"}
     )
+
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ("body",)
+
+
+class SearchForm(forms.Form):
+    query = forms.CharField(label="Что ищем?")
