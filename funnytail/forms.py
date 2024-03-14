@@ -44,7 +44,11 @@ class ContactForm(forms.Form):
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
-        fields = ("body",)
+        fields = (
+            "name",
+            "email",
+            "body",
+        )
 
 
 class SearchForm(forms.Form):

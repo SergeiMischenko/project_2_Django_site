@@ -25,16 +25,17 @@
 		<p><img class="preview" src="{{ post.preview.url }}"></p>
 	{% endif %}
 	{{ post.content|linebreaks }}
-
-	{% with post.comments.count as total_comments %}
 		<h2>
-			Комментариев: {{ total_comments }}
+			Комментариев: {{ comments.count }}
 		</h2>
-	{% endwith %}
-	{% for comment in post.comments.all %}
-		<div class="comment">
+	{% for comment in comments %}
+		{% if forloop.last %}
+			<div class="comment" id="last-comment">
+		{% else %}
+			<div class="comment">
+		{% endif %}
 			<p class="info">
-				{{ comment.author }}
+				{{ comment.name }}
 				{{ comment.created }}
 			</p>
 			{{ comment.body|linebreaks }}

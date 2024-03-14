@@ -1,9 +1,10 @@
 from django.conf import settings
+from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.postgres.search import (SearchQuery, SearchRank,
                                             SearchVector)
 from django.http import HttpRequest, HttpResponse
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse_lazy
 from django.views.decorators.http import require_POST
 from django.views.generic import (CreateView, DetailView, FormView, ListView,
@@ -67,7 +68,11 @@ class PostView(DataMixin, DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        return self.get_mixin_context(context, title=context["post"].title)
+        context["form"] = CommentForm()
+        comments = context["post"].comments.filter(active=True)
+        return self.get_mixin_context(
+            context, title=context["post"].title, comments=comments
+        )
 
     def get_object(self, queryset=None):
         return get_object_or_404(Cats.published, slug=self.kwargs[self.slug_url_kwarg])
@@ -127,10 +132,18 @@ def post_comment(request, post_id):
         comment = form.save(commit=False)
         comment.post = post
         comment.save()
+        return redirect(post)
+    messages.error(request, "Форма заполнена некорректно")
     return render(
         request,
-        "funnytail/comment.html",
-        {"post": post, "title": title, "form": form, "comment": comment},
+        "funnytail/post.html",
+        {
+            "post": post,
+            "title": title,
+            "form": form,
+            "comment": comment,
+            "default_image": settings.DEFAULT_USER_IMAGE,
+        },
     )
 
 

@@ -75,6 +75,16 @@
 
 	<!-- Блок контента -->
 	<article class="content">
+		{% if messages %}
+			<ul class="messages">
+				{% for message in messages %}
+					<li class="{{ message.tags }}">
+						{{ message|safe }}
+						<a href="{% url 'post' post.slug %}" class="close">x</a>
+					</li>
+				{% endfor %}
+			</ul>
+		{% endif %}
 		{% block breadcrumbs %}
 		{% endblock %}
 

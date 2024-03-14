@@ -115,17 +115,19 @@ class TagPosts(models.Model):
 
 class Comment(models.Model):
     post = models.ForeignKey(Cats, on_delete=models.CASCADE, related_name="comments")
-    name = models.CharField(max_length=80)
-    email = models.EmailField()
-    body = models.TextField()
+    name = models.CharField(max_length=80, verbose_name="Ваше имя")
+    email = models.EmailField(verbose_name="Ваш Email")
+    body = models.TextField(verbose_name="Текст комментария")
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     active = models.BooleanField(default=True)
 
     class Meta:
-        ordering = ("created",)
+        verbose_name = "Комментарий"
+        verbose_name_plural = "Комментарии"
+        ordering = ("-created",)
         indexes = [
-            models.Index(fields=["created"]),
+            models.Index(fields=["-created"]),
         ]
 
     def __str__(self):
