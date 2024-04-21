@@ -1614,8 +1614,8 @@
   "model": "contenttypes.contenttype",
   "pk": 13,
   "fields": {
-    "app_label": "users",
-    "model": "user"
+    "app_label": "funnytail",
+    "model": "breed"
   }
 },
 {
@@ -1623,7 +1623,7 @@
   "pk": 14,
   "fields": {
     "app_label": "funnytail",
-    "model": "breed"
+    "model": "tagposts"
   }
 },
 {
@@ -1631,7 +1631,7 @@
   "pk": 15,
   "fields": {
     "app_label": "funnytail",
-    "model": "tagposts"
+    "model": "cats"
   }
 },
 {
@@ -1639,15 +1639,23 @@
   "pk": 16,
   "fields": {
     "app_label": "funnytail",
-    "model": "cats"
+    "model": "comment"
   }
 },
 {
   "model": "contenttypes.contenttype",
   "pk": 17,
   "fields": {
-    "app_label": "funnytail",
-    "model": "comment"
+    "app_label": "users",
+    "model": "user"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "uadhjzrbae0remjtymn840rku7pi97uw",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAURP-FtSHA5enSvd9AgHuVqoGktCvjv9smXehuMufMvFlM61LjOmiOE7IzU-z02-VUntR2gI_U7p2X3pZ5ynxX-EEHv3ak1-Vw_w5qGnVbg7TeeC1IG1I5ADohEUB6Sw6cSRCk0lsQrhBZNLcgHARFRZScNXj2-QKjRzaM:1ryV72:6_Bd_E-PhYN5pWmK-yfrg9Z9b3JJWJOmIE_uA80LAFQ",
+    "expire_date": "2024-05-05T11:12:00.868Z"
   }
 },
 {
@@ -1664,6 +1672,16 @@
   "fields": {
     "domain": "localhost:800",
     "name": "localhost:800"
+  }
+},
+{
+  "model": "captcha.captchastore",
+  "pk": 1,
+  "fields": {
+    "challenge": "KLMC",
+    "response": "klmc",
+    "hashkey": "a1c37bf10845320aff82d8fe162f71c97cac739a",
+    "expiration": "2024-04-21T11:05:09.320Z"
   }
 },
 {
@@ -2034,11 +2052,24 @@
   }
 },
 {
+  "model": "funnytail.comment",
+  "pk": 1,
+  "fields": {
+    "post": 4,
+    "name": "Лидка",
+    "email": "lidka@mail.ru",
+    "body": "Жалко бросили котика....(",
+    "created": "2024-04-21T11:01:14.487Z",
+    "updated": "2024-04-21T11:01:14.487Z",
+    "active": true
+  }
+},
+{
   "model": "users.user",
   "pk": 1,
   "fields": {
     "password": "pbkdf2_sha256$720000$WffRiyMgYrjetMNfJZkEvJ$KADH6is8aXMM79U3vmn7+cD+tL0zO++3cUkpnbadr+8=",
-    "last_login": "2024-03-12T09:09:59.360Z",
+    "last_login": "2024-04-21T10:59:56.875Z",
     "is_superuser": true,
     "username": "root",
     "first_name": "",
@@ -2057,8 +2088,8 @@
   "model": "users.user",
   "pk": 2,
   "fields": {
-    "password": "pbkdf2_sha256$720000$xknOGEMEH6AW0oaJQvKrPd$WnnA24V4a0G/i25V/1R+kqNhlAJol/SdPsW9QMKGTC8=",
-    "last_login": "2024-03-12T09:05:44.967Z",
+    "password": "pbkdf2_sha256$720000$OrzetX8gySbCFTGYjKPuUv$yDUgPqeHIiUiBSwDrCXrpSKC57qyk9BdAosog93abFQ=",
+    "last_login": "2024-04-21T11:12:00.864Z",
     "is_superuser": false,
     "username": "lidka",
     "first_name": "lidka",
